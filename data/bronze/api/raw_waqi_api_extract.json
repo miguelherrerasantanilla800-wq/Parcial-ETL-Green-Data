@@ -1,0 +1,734 @@
+{
+  "metadata": {
+    "extracted_at": "2026-10-10T06:06:22.479727+00:00",
+    "api_source": "World Air Quality Index (WAQI)",
+    "target_url": "https://api.waqi.info/feed/A07441/?token=f364f4d36e528402b023dddf8214aeb4daadd2de"
+  },
+  "target_station_raw": {
+    "url": "https://api.waqi.info/feed/A07441/?token=f364f4d36e528402b023dddf8214aeb4daadd2de",
+    "http_status": 200,
+    "response": {
+      "status": "error",
+      "data": "no such station"
+    }
+  },
+  "resolved_station_raw": {
+    "url": "https://api.waqi.info/feed/@7441/?token=f364f4d36e528402b023dddf8214aeb4daadd2de",
+    "http_status": 200,
+    "response": {
+      "status": "ok",
+      "data": {
+        "aqi": 46,
+        "idx": 7441,
+        "attributions": [
+          {
+            "url": "http://deq.nc.gov/",
+            "name": "North Carolina Department of Environmental Quality",
+            "logo": "US-North-Carolina.png"
+          },
+          {
+            "url": "http://www.airnow.gov/",
+            "name": "Air Now - US EPA"
+          },
+          {
+            "url": "https://waqi.info/",
+            "name": "World Air Quality Index Project"
+          }
+        ],
+        "city": {
+          "geo": [
+            35.041401,
+            -78.953102
+          ],
+          "name": "W Owen Sch, North Carolina, USA",
+          "url": "https://aqicn.org/city/usa/north-carolina/w-owen-sch",
+          "location": ""
+        },
+        "dominentpol": "pm25",
+        "iaqi": {
+          "h": {
+            "v": 70.4
+          },
+          "p": {
+            "v": 1022.7
+          },
+          "pm10": {
+            "v": 19
+          },
+          "pm25": {
+            "v": 46
+          },
+          "t": {
+            "v": 19.3
+          },
+          "w": {
+            "v": 2
+          },
+          "wg": {
+            "v": 7.6
+          }
+        },
+        "time": {
+          "s": "2026-10-10 00:00:00",
+          "tz": "-05:00",
+          "v": 1791590400,
+          "iso": "2026-10-10T00:00:00-05:00"
+        },
+        "forecast": {},
+        "debug": {
+          "sync": "2026-10-10T14:22:08+09:00"
+        }
+      }
+    }
+  },
+  "colombia_stations_raw": [
+    {
+      "uid": 8512,
+      "city_keyword": "bogota",
+      "url": "https://api.waqi.info/feed/@8512/?token=f364f4d36e528402b023dddf8214aeb4daadd2de",
+      "http_status": 200,
+      "response": {
+        "status": "ok",
+        "data": {
+          "aqi": 65,
+          "idx": 8512,
+          "attributions": [
+            {
+              "url": "http://oab.ambientebogota.gov.co/",
+              "name": "OAB - El Observatorio Ambiental de Bogot&aacute;",
+              "logo": "Colombia-OAB.png"
+            },
+            {
+              "url": "https://waqi.info/",
+              "name": "World Air Quality Index Project"
+            }
+          ],
+          "city": {
+            "geo": [
+              4.5958,
+              -74.14855
+            ],
+            "name": "Carvajal - Sevillana, Bogota, Colombia",
+            "url": "https://aqicn.org/city/colombia/bogota/carvajal-sevillana",
+            "location": ""
+          },
+          "dominentpol": "pm25",
+          "iaqi": {
+            "dew": {
+              "v": 12.5
+            },
+            "h": {
+              "v": 100
+            },
+            "p": {
+              "v": 1029.5
+            },
+            "pm10": {
+              "v": 10
+            },
+            "pm25": {
+              "v": 65
+            },
+            "r": {
+              "v": 5.4
+            },
+            "so2": {
+              "v": 0.6
+            },
+            "t": {
+              "v": 13.5
+            },
+            "w": {
+              "v": 1.2
+            },
+            "wg": {
+              "v": 6.6
+            }
+          },
+          "time": {
+            "s": "2026-10-10 00:00:00",
+            "tz": "-05:00",
+            "v": 1791590400,
+            "iso": "2026-10-10T00:00:00-05:00"
+          },
+          "forecast": {},
+          "debug": {
+            "sync": "2026-10-10T14:05:30+09:00"
+          }
+        }
+      }
+    },
+    {
+      "uid": 6233,
+      "city_keyword": "bogota",
+      "url": "https://api.waqi.info/feed/@6233/?token=f364f4d36e528402b023dddf8214aeb4daadd2de",
+      "http_status": 200,
+      "response": {
+        "status": "ok",
+        "data": {
+          "aqi": 64,
+          "idx": 6233,
+          "attributions": [
+            {
+              "url": "http://oab.ambientebogota.gov.co/",
+              "name": "OAB - El Observatorio Ambiental de Bogot&aacute;",
+              "logo": "Colombia-OAB.png"
+            },
+            {
+              "url": "https://waqi.info/",
+              "name": "World Air Quality Index Project"
+            }
+          ],
+          "city": {
+            "geo": [
+              4.65837,
+              -74.084
+            ],
+            "name": "Centro de Alto Rendimiento, Bogota, Colombia",
+            "url": "https://aqicn.org/city/colombia/bogota/centro-de-alto-rendimiento",
+            "location": ""
+          },
+          "dominentpol": "pm25",
+          "iaqi": {
+            "co": {
+              "v": 4.6
+            },
+            "dew": {
+              "v": 12.5
+            },
+            "h": {
+              "v": 87
+            },
+            "no2": {
+              "v": 10.5
+            },
+            "o3": {
+              "v": 0.4
+            },
+            "p": {
+              "v": 566
+            },
+            "pm10": {
+              "v": 21
+            },
+            "pm25": {
+              "v": 64
+            },
+            "r": {
+              "v": 8
+            },
+            "so2": {
+              "v": 0.1
+            },
+            "t": {
+              "v": 13
+            },
+            "w": {
+              "v": 0.2
+            },
+            "wd": {
+              "v": 182
+            },
+            "wg": {
+              "v": 6.6
+            }
+          },
+          "time": {
+            "s": "2026-10-10 00:00:00",
+            "tz": "-05:00",
+            "v": 1791590400,
+            "iso": "2026-10-10T00:00:00-05:00"
+          },
+          "forecast": {},
+          "debug": {
+            "sync": "2026-10-10T14:05:30+09:00"
+          }
+        }
+      }
+    },
+    {
+      "uid": 6230,
+      "city_keyword": "bogota",
+      "url": "https://api.waqi.info/feed/@6230/?token=f364f4d36e528402b023dddf8214aeb4daadd2de",
+      "http_status": 200,
+      "response": {
+        "status": "ok",
+        "data": {
+          "aqi": 63,
+          "idx": 6230,
+          "attributions": [
+            {
+              "url": "http://oab.ambientebogota.gov.co/",
+              "name": "OAB - El Observatorio Ambiental de Bogot&aacute;",
+              "logo": "Colombia-OAB.png"
+            },
+            {
+              "url": "https://waqi.info/",
+              "name": "World Air Quality Index Project"
+            }
+          ],
+          "city": {
+            "geo": [
+              4.6249,
+              -74.16135
+            ],
+            "name": "Kennedy, Bogota, Colombia",
+            "url": "https://aqicn.org/city/colombia/bogota/kennedy",
+            "location": ""
+          },
+          "dominentpol": "pm25",
+          "iaqi": {
+            "co": {
+              "v": 13.3
+            },
+            "dew": {
+              "v": 12.5
+            },
+            "h": {
+              "v": 87.9
+            },
+            "no2": {
+              "v": 12.4
+            },
+            "o3": {
+              "v": 0.7
+            },
+            "p": {
+              "v": 1029.5
+            },
+            "pm10": {
+              "v": 25
+            },
+            "pm25": {
+              "v": 63
+            },
+            "r": {
+              "v": 2.7
+            },
+            "so2": {
+              "v": 1.2
+            },
+            "t": {
+              "v": 12.5
+            },
+            "w": {
+              "v": 0.6
+            },
+            "wg": {
+              "v": 6.6
+            }
+          },
+          "time": {
+            "s": "2026-10-10 00:00:00",
+            "tz": "-05:00",
+            "v": 1791590400,
+            "iso": "2026-10-10T00:00:00-05:00"
+          },
+          "forecast": {},
+          "debug": {
+            "sync": "2026-10-10T14:05:35+09:00"
+          }
+        }
+      }
+    },
+    {
+      "uid": 12510,
+      "city_keyword": "medellin",
+      "url": "https://api.waqi.info/feed/@12510/?token=f364f4d36e528402b023dddf8214aeb4daadd2de",
+      "http_status": 200,
+      "response": {
+        "status": "ok",
+        "data": {
+          "aqi": 72,
+          "idx": 12510,
+          "attributions": [
+            {
+              "url": "https://www.metropol.gov.co/ambiental",
+              "name": "Área Metropolitana del Valle de Aburrá",
+              "logo": "Colombia-Aburra.png"
+            },
+            {
+              "url": "https://waqi.info/",
+              "name": "World Air Quality Index Project"
+            }
+          ],
+          "city": {
+            "geo": [
+              6.2218938,
+              -75.6106033
+            ],
+            "name": "Altavista, Medellín, Colombia",
+            "url": "https://aqicn.org/city/colombia/medellin/altavista",
+            "location": ""
+          },
+          "dominentpol": "pm25",
+          "iaqi": {
+            "dew": {
+              "v": 14
+            },
+            "h": {
+              "v": 68
+            },
+            "no2": {
+              "v": 12.8
+            },
+            "o3": {
+              "v": 63.6
+            },
+            "p": {
+              "v": 1023
+            },
+            "pm10": {
+              "v": 53
+            },
+            "pm25": {
+              "v": 72
+            },
+            "t": {
+              "v": 20
+            },
+            "w": {
+              "v": 1
+            }
+          },
+          "time": {
+            "s": "2026-10-09 16:00:00",
+            "tz": "-05:00",
+            "v": 1791561600,
+            "iso": "2026-10-09T16:00:00-05:00"
+          },
+          "forecast": {},
+          "debug": {
+            "sync": "2026-10-10T07:44:53+09:00"
+          }
+        }
+      }
+    },
+    {
+      "uid": 12627,
+      "city_keyword": "medellin",
+      "url": "https://api.waqi.info/feed/@12627/?token=f364f4d36e528402b023dddf8214aeb4daadd2de",
+      "http_status": 200,
+      "response": {
+        "status": "ok",
+        "data": {
+          "aqi": 70,
+          "idx": 12627,
+          "attributions": [
+            {
+              "url": "https://www.metropol.gov.co/ambiental",
+              "name": "Área Metropolitana del Valle de Aburrá",
+              "logo": "Colombia-Aburra.png"
+            },
+            {
+              "url": "https://waqi.info/",
+              "name": "World Air Quality Index Project"
+            }
+          ],
+          "city": {
+            "geo": [
+              6.2372341,
+              -75.610466
+            ],
+            "name": "Belén, Medellín, Colombia",
+            "url": "https://aqicn.org/city/colombia/medellin/belen",
+            "location": ""
+          },
+          "dominentpol": "pm25",
+          "iaqi": {
+            "dew": {
+              "v": 18
+            },
+            "h": {
+              "v": 100
+            },
+            "p": {
+              "v": 1016
+            },
+            "pm25": {
+              "v": 70
+            },
+            "t": {
+              "v": 18
+            },
+            "w": {
+              "v": 5.6
+            },
+            "wg": {
+              "v": 12.8
+            }
+          },
+          "time": {
+            "s": "2026-10-09 16:00:00",
+            "tz": "-05:00",
+            "v": 1791561600,
+            "iso": "2026-10-09T16:00:00-05:00"
+          },
+          "forecast": {},
+          "debug": {
+            "sync": "2026-10-10T07:10:18+09:00"
+          }
+        }
+      }
+    },
+    {
+      "uid": 12636,
+      "city_keyword": "medellin",
+      "url": "https://api.waqi.info/feed/@12636/?token=f364f4d36e528402b023dddf8214aeb4daadd2de",
+      "http_status": 200,
+      "response": {
+        "status": "ok",
+        "data": {
+          "aqi": 65,
+          "idx": 12636,
+          "attributions": [
+            {
+              "url": "https://www.metropol.gov.co/ambiental",
+              "name": "Área Metropolitana del Valle de Aburrá",
+              "logo": "Colombia-Aburra.png"
+            },
+            {
+              "url": "https://waqi.info/",
+              "name": "World Air Quality Index Project"
+            }
+          ],
+          "city": {
+            "geo": [
+              6.1686831,
+              -75.5819702
+            ],
+            "name": "Envigado, Medellín, Colombia",
+            "url": "https://aqicn.org/city/colombia/medellin/envigado",
+            "location": ""
+          },
+          "dominentpol": "pm25",
+          "iaqi": {
+            "dew": {
+              "v": 18
+            },
+            "h": {
+              "v": 100
+            },
+            "p": {
+              "v": 1016
+            },
+            "pm25": {
+              "v": 65
+            },
+            "t": {
+              "v": 18
+            },
+            "w": {
+              "v": 5.6
+            },
+            "wg": {
+              "v": 12.8
+            }
+          },
+          "time": {
+            "s": "2026-10-09 16:00:00",
+            "tz": "-05:00",
+            "v": 1791561600,
+            "iso": "2026-10-09T16:00:00-05:00"
+          },
+          "forecast": {},
+          "debug": {
+            "sync": "2026-10-10T07:10:18+09:00"
+          }
+        }
+      }
+    },
+    {
+      "uid": 13320,
+      "city_keyword": "cali",
+      "url": "https://api.waqi.info/feed/@13320/?token=f364f4d36e528402b023dddf8214aeb4daadd2de",
+      "http_status": 200,
+      "response": {
+        "status": "ok",
+        "data": {
+          "aqi": 31,
+          "idx": 13320,
+          "attributions": [
+            {
+              "url": "http://cali.gov.co/",
+              "name": "Alcadia de Santiago de Cali",
+              "logo": "Colombia-Cali.png"
+            },
+            {
+              "url": "https://waqi.info/",
+              "name": "World Air Quality Index Project"
+            }
+          ],
+          "city": {
+            "geo": [
+              3.4504194444444,
+              -76.522266666667
+            ],
+            "name": "ERA-Obrero, Cali, Colombia",
+            "url": "https://aqicn.org/city/colombia/cali/era-obrero"
+          },
+          "dominentpol": "pm10",
+          "iaqi": {
+            "dew": {
+              "v": 19
+            },
+            "h": {
+              "v": 61
+            },
+            "p": {
+              "v": 1013
+            },
+            "pm10": {
+              "v": 31
+            },
+            "t": {
+              "v": 27
+            },
+            "w": {
+              "v": 4.1
+            }
+          },
+          "time": {
+            "s": "2021-06-07 18:00:00",
+            "tz": "-05:00",
+            "v": 1623088800,
+            "iso": "2021-06-07T18:00:00-05:00"
+          },
+          "forecast": {},
+          "debug": {
+            "sync": "2021-06-08T08:21:59+09:00"
+          }
+        }
+      }
+    },
+    {
+      "uid": 13321,
+      "city_keyword": "cali",
+      "url": "https://api.waqi.info/feed/@13321/?token=f364f4d36e528402b023dddf8214aeb4daadd2de",
+      "http_status": 200,
+      "response": {
+        "status": "ok",
+        "data": {
+          "aqi": 12,
+          "idx": 13321,
+          "attributions": [
+            {
+              "url": "http://cali.gov.co/",
+              "name": "Alcadia de Santiago de Cali",
+              "logo": "Colombia-Cali.png"
+            },
+            {
+              "url": "https://waqi.info/",
+              "name": "World Air Quality Index Project"
+            }
+          ],
+          "city": {
+            "geo": [
+              3.4554694444444,
+              -76.530991666667
+            ],
+            "name": "La Ermita, Cali, Colombia",
+            "url": "https://aqicn.org/city/colombia/cali/la-ermita"
+          },
+          "dominentpol": "pm10",
+          "iaqi": {
+            "dew": {
+              "v": 19
+            },
+            "h": {
+              "v": 61
+            },
+            "p": {
+              "v": 1013
+            },
+            "pm10": {
+              "v": 12
+            },
+            "so2": {
+              "v": 1.2
+            },
+            "t": {
+              "v": 27
+            },
+            "w": {
+              "v": 4.1
+            }
+          },
+          "time": {
+            "s": "2021-06-07 18:00:00",
+            "tz": "-05:00",
+            "v": 1623088800,
+            "iso": "2021-06-07T18:00:00-05:00"
+          },
+          "forecast": {},
+          "debug": {
+            "sync": "2021-06-08T08:22:09+09:00"
+          }
+        }
+      }
+    },
+    {
+      "uid": 13322,
+      "city_keyword": "cali",
+      "url": "https://api.waqi.info/feed/@13322/?token=f364f4d36e528402b023dddf8214aeb4daadd2de",
+      "http_status": 200,
+      "response": {
+        "status": "ok",
+        "data": {
+          "aqi": 2,
+          "idx": 13322,
+          "attributions": [
+            {
+              "url": "http://cali.gov.co/",
+              "name": "Alcadia de Santiago de Cali",
+              "logo": "Colombia-Cali.png"
+            },
+            {
+              "url": "https://waqi.info/",
+              "name": "World Air Quality Index Project"
+            }
+          ],
+          "city": {
+            "geo": [
+              3.4905138888889,
+              -76.521225
+            ],
+            "name": "La Flora, Cali, Colombia",
+            "url": "https://aqicn.org/city/colombia/cali/la-flora"
+          },
+          "dominentpol": "pm10",
+          "iaqi": {
+            "dew": {
+              "v": 19
+            },
+            "h": {
+              "v": 61
+            },
+            "p": {
+              "v": 1013
+            },
+            "pm10": {
+              "v": 2
+            },
+            "t": {
+              "v": 27
+            },
+            "w": {
+              "v": 4.1
+            }
+          },
+          "time": {
+            "s": "2021-06-07 18:00:00",
+            "tz": "-05:00",
+            "v": 1623088800,
+            "iso": "2021-06-07T18:00:00-05:00"
+          },
+          "forecast": {},
+          "debug": {
+            "sync": "2021-06-08T08:22:08+09:00"
+          }
+        }
+      }
+    }
+  ]
+}

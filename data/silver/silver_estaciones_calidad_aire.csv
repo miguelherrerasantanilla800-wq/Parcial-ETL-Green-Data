@@ -1,0 +1,11 @@
+﻿estacion_id,estacion_nombre,ciudad,pais,latitud,longitud,agencia_monitoreo,url_estacion
+7441,"W Owen Sch, North Carolina, USA",North Carolina,USA,35.041401,-78.953102,North Carolina Department of Environmental Quality,https://aqicn.org/city/usa/north-carolina/w-owen-sch
+8512,"Carvajal - Sevillana, Bogota, Colombia",Bogota,Colombia,4.5958,-74.14855,OAB - El Observatorio Ambiental de Bogot&aacute;,https://aqicn.org/city/colombia/bogota/carvajal-sevillana
+6233,"Centro de Alto Rendimiento, Bogota, Colombia",Bogota,Colombia,4.65837,-74.084,OAB - El Observatorio Ambiental de Bogot&aacute;,https://aqicn.org/city/colombia/bogota/centro-de-alto-rendimiento
+6230,"Kennedy, Bogota, Colombia",Bogota,Colombia,4.6249,-74.16135,OAB - El Observatorio Ambiental de Bogot&aacute;,https://aqicn.org/city/colombia/bogota/kennedy
+12510,"Altavista, Medellín, Colombia",Medellín,Colombia,6.2218938,-75.6106033,Área Metropolitana del Valle de Aburrá,https://aqicn.org/city/colombia/medellin/altavista
+12627,"Belén, Medellín, Colombia",Medellín,Colombia,6.2372341,-75.610466,Área Metropolitana del Valle de Aburrá,https://aqicn.org/city/colombia/medellin/belen
+12636,"Envigado, Medellín, Colombia",Medellín,Colombia,6.1686831,-75.5819702,Área Metropolitana del Valle de Aburrá,https://aqicn.org/city/colombia/medellin/envigado
+13320,"ERA-Obrero, Cali, Colombia",Cali,Colombia,3.4504194444444,-76.522266666667,Alcadia de Santiago de Cali,https://aqicn.org/city/colombia/cali/era-obrero
+13321,"La Ermita, Cali, Colombia",Cali,Colombia,3.4554694444444,-76.530991666667,Alcadia de Santiago de Cali,https://aqicn.org/city/colombia/cali/la-ermita
+13322,"La Flora, Cali, Colombia",Cali,Colombia,3.4905138888889,-76.521225,Alcadia de Santiago de Cali,https://aqicn.org/city/colombia/cali/la-flora

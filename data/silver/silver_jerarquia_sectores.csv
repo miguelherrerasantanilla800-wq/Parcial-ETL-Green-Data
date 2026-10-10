@@ -1,0 +1,353 @@
+﻿sector_id,codigo_ipcc,sector_macro_id,sector_macro_nombre,categoria_descripcion,clasificacion_limpia,nivel_jerarquia
+1_Energía,1,1,Energía,Energía,1. Energía,1
+1.A_Actividades_de_quema_de_combus,1.A,1,Energía,Actividades de quema de combustibles,1.A. Actividades de quema de combustibles,2
+1.A.1_Industrias_de_la_energía,1.A.1,1,Energía,Industrias de la energía,1.A.1. Industrias de la energía,3
+1.A.1.a_Producción_de_electricidad_púb,1.A.1.a,1,Energía,Producción de electricidad pública y calor como actividad principal,1.A.1.a. Producción de electricidad pública y calor como actividad principal,4
+1.A.1.a.i_Generación_de_electricidad,1.A.1.a.i,1,Energía,Generación de electricidad,1.A.1.a.i. Generación de electricidad,5
+1.A.1.b_Refinación_del_petróleo,1.A.1.b,1,Energía,Refinación del petróleo,1.A.1.b. Refinación del petróleo,4
+1.A.1.c_Fabricación_de_combustibles_só,1.A.1.c,1,Energía,Fabricación de combustibles sólidos y otras energías,1.A.1.c. Fabricación de combustibles sólidos y otras energías,4
+1.A.1.c.i_Manufactura_de_combustibles_só,1.A.1.c.i,1,Energía,Manufactura de combustibles sólidos,1.A.1.c.i. Manufactura de combustibles sólidos,5
+1.A.1.c.ii_Extracción_de_petróleo_y_gas,1.A.1.c.ii,1,Energía,Extracción de petróleo y gas,1.A.1.c.ii. Extracción de petróleo y gas,5
+1.A.1.c.iii_Otras_industrias_de_la_energía,1.A.1.c.iii,1,Energía,Otras industrias de la energía,1.A.1.c.iii. Otras industrias de la energía,5
+1.A.2_Industrias_manufactureras_y_co,1.A.2,1,Energía,Industrias manufactureras y construcción,1.A.2. Industrias manufactureras y construcción,3
+1.A.2.a_Hierro_y_acero,1.A.2.a,1,Energía,Hierro y acero,1.A.2.a. Hierro y acero,4
+1.A.2.b_Metales_no_ferrosos,1.A.2.b,1,Energía,Metales no ferrosos,1.A.2.b. Metales no ferrosos,4
+1.A.2.c_Productos_químicos,1.A.2.c,1,Energía,Productos químicos,1.A.2.c. Productos químicos,4
+1.A.2.d_Pulpa__papel_e_imprenta,1.A.2.d,1,Energía,"Pulpa, papel e imprenta","1.A.2.d. Pulpa, papel e imprenta",4
+1.A.2.e_Procesado_de_alimentos__bebida,1.A.2.e,1,Energía,"Procesado de alimentos, bebidas y tabaco","1.A.2.e. Procesado de alimentos, bebidas y tabaco",4
+1.A.2.f_Minerales_no_metálicos,1.A.2.f,1,Energía,Minerales no metálicos,1.A.2.f. Minerales no metálicos,4
+1.A.2.g_Otros,1.A.2.g,1,Energía,Otros,1.A.2.g. Otros,4
+1.A.2.g.i_Fabricación_de_maquinaria,1.A.2.g.i,1,Energía,Fabricación de maquinaria,1.A.2.g.i. Fabricación de maquinaria,5
+1.A.2.g.ii_Fabricación_de_material_de_tra,1.A.2.g.ii,1,Energía,Fabricación de material de transporte,1.A.2.g.ii. Fabricación de material de transporte,5
+1.A.2.g.iii_Minería__excluidos_combustible,1.A.2.g.iii,1,Energía,Minería (excluidos combustibles) y explotación de canteras,1.A.2.g.iii. Minería (excluidos combustibles) y explotación de canteras,5
+1.A.2.g.iv_Madera_y_productos_de_la_mader,1.A.2.g.iv,1,Energía,Madera y productos de la madera,1.A.2.g.iv. Madera y productos de la madera,5
+1.A.2.g.v_Construcción,1.A.2.g.v,1,Energía,Construcción,1.A.2.g.v. Construcción,5
+1.A.2.g.vi_Textiles_y_cueros,1.A.2.g.vi,1,Energía,Textiles y cueros,1.A.2.g.vi. Textiles y cueros,5
+1.A.2.g.vii_Vehículos_todoterreno_y_otra_m,1.A.2.g.vii,1,Energía,Vehículos todoterreno y otra maquinaria,1.A.2.g.vii. Vehículos todoterreno y otra maquinaria,5
+1.A.2.g.viii_Otros,1.A.2.g.viii,1,Energía,Otros,1.A.2.g.viii. Otros,5
+1.A.3_Transporte,1.A.3,1,Energía,Transporte,1.A.3. Transporte,3
+1.A.3.a_Aviación_domestica,1.A.3.a,1,Energía,Aviación domestica,1.A.3.a. Aviación domestica,4
+1.A.3.a.i_Aviación_doméstica__LTO_,1.A.3.a.i,1,Energía,Aviación doméstica (LTO),1.A.3.a.i. Aviación doméstica (LTO),5
+1.A.3.a.ii_Aviación_doméstica__Crucero_,1.A.3.a.ii,1,Energía,Aviación doméstica (Crucero),1.A.3.a.ii. Aviación doméstica (Crucero),5
+1.A.3.b_Transporte_terrestre,1.A.3.b,1,Energía,Transporte terrestre,1.A.3.b. Transporte terrestre,4
+1.A.3.b.i_Automóviles,1.A.3.b.i,1,Energía,Automóviles,1.A.3.b.i. Automóviles,5
+1.A.3.b.i.1_Automóviles_particulares__dipl,1.A.3.b.i.1,1,Energía,"Automóviles particulares, diplomáticos y oficiales","1.A.3.b.i.1. Automóviles particulares, diplomáticos y oficiales",6
+1.A.3.b.i.2_Automóviles_servicio_público,1.A.3.b.i.2,1,Energía,Automóviles servicio público,1.A.3.b.i.2. Automóviles servicio público,6
+1.A.3.b.i.3_Camperos,1.A.3.b.i.3,1,Energía,Camperos,1.A.3.b.i.3. Camperos,6
+1.A.3.b.ii_Camiones_para_servicio_ligero,1.A.3.b.ii,1,Energía,Camiones para servicio ligero,1.A.3.b.ii. Camiones para servicio ligero,5
+1.A.3.b.ii.1_Camionetas,1.A.3.b.ii.1,1,Energía,Camionetas,1.A.3.b.ii.1. Camionetas,6
+1.A.3.b.iii_Camiones_para_servicio_pesado_,1.A.3.b.iii,1,Energía,Camiones para servicio pesado y autobuses,1.A.3.b.iii. Camiones para servicio pesado y autobuses,5
+1.A.3.b.iii.1_Buses,1.A.3.b.iii.1,1,Energía,Buses,1.A.3.b.iii.1. Buses,6
+1.A.3.b.iii.2_Camiones_y_volquetas,1.A.3.b.iii.2,1,Energía,Camiones y volquetas,1.A.3.b.iii.2. Camiones y volquetas,6
+1.A.3.b.iii.3_Tractocamiones,1.A.3.b.iii.3,1,Energía,Tractocamiones,1.A.3.b.iii.3. Tractocamiones,6
+1.A.3.b.iv_Motocicletas,1.A.3.b.iv,1,Energía,Motocicletas,1.A.3.b.iv. Motocicletas,5
+1.A.3.b.iv.1_Motos,1.A.3.b.iv.1,1,Energía,Motos,1.A.3.b.iv.1. Motos,6
+1.A.3.b.v_Otros,1.A.3.b.v,1,Energía,Otros,1.A.3.b.v.  Otros,5
+1.A.3.b.v.4_Otros,1.A.3.b.v.4,1,Energía,Otros,1.A.3.b.v.4. Otros,6
+1.A.3.c_Ferrocarriles,1.A.3.c,1,Energía,Ferrocarriles,1.A.3.c. Ferrocarriles,4
+1.A.3.d_Navegación_doméstica,1.A.3.d,1,Energía,Navegación doméstica,1.A.3.d. Navegación doméstica,4
+1.A.3.e_Otro_transporte,1.A.3.e,1,Energía,Otro transporte,1.A.3.e. Otro transporte,4
+1.A.3.e.i_Transporte_por_tubería,1.A.3.e.i,1,Energía,Transporte por tubería,1.A.3.e.i. Transporte por tubería,5
+1.A.4_Otros_sectores,1.A.4,1,Energía,Otros sectores,1.A.4. Otros sectores,3
+1.A.4.a_Comercial_institucional,1.A.4.a,1,Energía,Comercial/institucional,1.A.4.a. Comercial/institucional,4
+1.A.4.a.i_Estacionaria,1.A.4.a.i,1,Energía,Estacionaria,1.A.4.a.i. Estacionaria,5
+1.A.4.b_Residencial,1.A.4.b,1,Energía,Residencial,1.A.4.b. Residencial,4
+1.A.4.b.i_Estacionaria,1.A.4.b.i,1,Energía,Estacionaria,1.A.4.b.i. Estacionaria,5
+1.A.4.c_Agricultura_silvicultura_pesca,1.A.4.c,1,Energía,Agricultura/silvicultura/pesca,1.A.4.c. Agricultura/silvicultura/pesca,4
+1.A.4.c.i_Estacionario,1.A.4.c.i,1,Energía,Estacionario,1.A.4.c.i. Estacionario,5
+1.A.4.c.ii_Móviles__Vehículos_todoterreno,1.A.4.c.ii,1,Energía,Móviles (Vehículos todoterreno y otra maquinaria),1.A.4.c.ii. Móviles (Vehículos todoterreno y otra maquinaria),5
+1.B_Emisiones_fugitivas_de_combust,1.B,1,Energía,Emisiones fugitivas de combustibles,1.B. Emisiones fugitivas de combustibles,2
+1.B.1_Combustibles_sólidos,1.B.1,1,Energía,Combustibles sólidos,1.B.1. Combustibles sólidos,3
+1.B.1.a_Minería_carbonífera_y_manejo_d,1.B.1.a,1,Energía,Minería carbonífera y manejo del carbón.,1.B.1.a. Minería carbonífera y manejo del carbón.,4
+1.B.1.a.i_Minas_subterráneas,1.B.1.a.i,1,Energía,Minas subterráneas,1.B.1.a.i Minas subterráneas,5
+1.B.1.a.i.1_Minería,1.B.1.a.i.1,1,Energía,Minería,1.B.1.a.i.1. Minería,6
+1.B.1.a.i.2_Emisiones_posteriores_a_la_min,1.B.1.a.i.2,1,Energía,Emisiones posteriores a la minería,1.B.1.a.i.2. Emisiones posteriores a la minería,6
+1.B.1.a.ii_Minas_de_superficie,1.B.1.a.ii,1,Energía,Minas de superficie,1.B.1.a.ii. Minas de superficie,5
+1.B.1.a.ii.1_Minería,1.B.1.a.ii.1,1,Energía,Minería,1.B.1.a.ii.1. Minería,6
+1.B.1.a.ii.2_Emisiones_posteriores_a_la_min,1.B.1.a.ii.2,1,Energía,Emisiones posteriores a la minería,1.B.1.a.ii.2. Emisiones posteriores a la minería,6
+1.B.2_Petróleo_y_gas_natural_y_otras,1.B.2,1,Energía,Petróleo y gas natural y otras emisiones derivadas de la producción de energía,1.B.2. Petróleo y gas natural y otras emisiones derivadas de la producción de energía,3
+1.B.2.a_Petróleo,1.B.2.a,1,Energía,Petróleo,1.B.2.a. Petróleo,4
+1.B.2.a.ii_Producción_y_modernización,1.B.2.a.ii,1,Energía,Producción y modernización,1.B.2.a.ii. Producción y modernización,5
+1.B.2.a.iii_Transporte,1.B.2.a.iii,1,Energía,Transporte,1.B.2.a.iii. Transporte,5
+1.B.2.a.iv_Refinamiento_y_almacenamiento,1.B.2.a.iv,1,Energía,Refinamiento y almacenamiento,1.B.2.a.iv. Refinamiento y almacenamiento,5
+1.B.2.b_Gas_natural,1.B.2.b,1,Energía,Gas natural,1.B.2.b. Gas natural,4
+1.B.2.b.ii_Producción_y_recolección,1.B.2.b.ii,1,Energía,Producción y recolección,1.B.2.b.ii. Producción y recolección,5
+1.B.2.b.iii_Procesamiento,1.B.2.b.iii,1,Energía,Procesamiento,1.B.2.b.iii. Procesamiento,5
+1.B.2.b.iv_Transmisión_y_almacenamiento,1.B.2.b.iv,1,Energía,Transmisión y almacenamiento,1.B.2.b.iv. Transmisión y almacenamiento,5
+1.B.2.b.v_Distribución,1.B.2.b.v,1,Energía,Distribución,1.B.2.b.v. Distribución,5
+1.B.2.c_Venteo_y_quema_en_antorcha,1.B.2.c,1,Energía,Venteo y quema en antorcha,1.B.2.c. Venteo y quema en antorcha,4
+1.B.2.c.i_Venteo,1.B.2.c.i,1,Energía,Venteo,1.B.2.c.i. Venteo,5
+1.B.2.c.i.1_Petróleo,1.B.2.c.i.1,1,Energía,Petróleo,1.B.2.c.i.1. Petróleo,6
+1.B.2.c.i.2_Gas,1.B.2.c.i.2,1,Energía,Gas,1.B.2.c.i.2. Gas,6
+1.B.2.c.ii_Quema_en_antorcha,1.B.2.c.ii,1,Energía,Quema en antorcha,1.B.2.c.ii. Quema en antorcha,5
+1.B.2.c.ii.1_Petróleo,1.B.2.c.ii.1,1,Energía,Petróleo,1.B.2.c.ii.1. Petróleo,6
+1.B.2.c.ii.2_Gas,1.B.2.c.ii.2,1,Energía,Gas,1.B.2.c.ii.2. Gas,6
+2_Procesos_industriales_y_uso_de,2,2,Procesos Industriales y Uso de Productos (IPPU),Procesos industriales y uso de productos,2. Procesos industriales y uso de productos,1
+2.A_Industria_de_los_minerales,2.A,2,Procesos Industriales y Uso de Productos (IPPU),Industria de los minerales,2.A. Industria de los minerales,2
+2.A.1_Producción_de_cemento,2.A.1,2,Procesos Industriales y Uso de Productos (IPPU),Producción de cemento,2.A.1. Producción de cemento,3
+2.A.2_Producción_de_cal,2.A.2,2,Procesos Industriales y Uso de Productos (IPPU),Producción de cal,2.A.2. Producción de cal,3
+2.A.3_Producción_de_vidrio,2.A.3,2,Procesos Industriales y Uso de Productos (IPPU),Producción de vidrio,2.A.3. Producción de vidrio,3
+2.A.4_Otros_usos_industriales_de_los,2.A.4,2,Procesos Industriales y Uso de Productos (IPPU),Otros usos industriales de los carbonatos,2.A.4. Otros usos industriales de los carbonatos,3
+2.A.4.b_Otros_usos_de_la_ceniza_de_sos,2.A.4.b,2,Procesos Industriales y Uso de Productos (IPPU),Otros usos de la ceniza de sosa,2.A.4.b. Otros usos de la ceniza de sosa,4
+2.B_Industria_química,2.B,2,Procesos Industriales y Uso de Productos (IPPU),Industria química,2.B. Industria química,2
+2.B.1_Producción_de_amoníaco,2.B.1,2,Procesos Industriales y Uso de Productos (IPPU),Producción de amoníaco,2.B.1. Producción de amoníaco,3
+2.B.2_Producción_de_ácido_nítrico,2.B.2,2,Procesos Industriales y Uso de Productos (IPPU),Producción de ácido nítrico,2.B.2. Producción de ácido nítrico,3
+2.B.4_Producción_de_caprolactama__gl,2.B.4,2,Procesos Industriales y Uso de Productos (IPPU),"Producción de caprolactama, glioxal y ácido glioxílico","2.B.4. Producción de caprolactama, glioxal y ácido glioxílico",3
+2.B.4.a_Caprolactama,2.B.4.a,2,Procesos Industriales y Uso de Productos (IPPU),Caprolactama,2.B.4.a. Caprolactama,4
+2.B.8_Producción_petroquímica_y_de_n,2.B.8,2,Procesos Industriales y Uso de Productos (IPPU),Producción petroquímica y de negro de humo,2.B.8. Producción petroquímica y de negro de humo,3
+2.B.8.b_Etileno,2.B.8.b,2,Procesos Industriales y Uso de Productos (IPPU),Etileno,2.B.8.b. Etileno,4
+2.B.8.c_Dicloruro_de_etileno_y_monómer,2.B.8.c,2,Procesos Industriales y Uso de Productos (IPPU),Dicloruro de etileno y monómero de cloruro de vinilo,2.B.8.c. Dicloruro de etileno y monómero de cloruro de vinilo,4
+2.B.8.f_Negro_de_humo,2.B.8.f,2,Procesos Industriales y Uso de Productos (IPPU),Negro de humo,2.B.8.f. Negro de humo,4
+2.C_Industria_de_los_metales,2.C,2,Procesos Industriales y Uso de Productos (IPPU),Industria de los metales,2.C. Industria de los metales,2
+2.C.1_Producción_de_hierro_y_acero,2.C.1,2,Procesos Industriales y Uso de Productos (IPPU),Producción de hierro y acero,2.C.1. Producción de hierro y acero,3
+2.C.1.a_Acero,2.C.1.a,2,Procesos Industriales y Uso de Productos (IPPU),Acero,2.C.1.a. Acero,4
+2.C.1.d_Sinterizado,2.C.1.d,2,Procesos Industriales y Uso de Productos (IPPU),Sinterizado,2.C.1.d. Sinterizado,4
+2.C.2_Producción_de_ferroaleñaciones,2.C.2,2,Procesos Industriales y Uso de Productos (IPPU),Producción de ferroaleñaciones,2.C.2. Producción de ferroaleñaciones,3
+2.C.5_Producción_de_plomo,2.C.5,2,Procesos Industriales y Uso de Productos (IPPU),Producción de plomo,2.C.5. Producción de plomo,3
+2.D_Uso_de_productos_no_energético,2.D,2,Procesos Industriales y Uso de Productos (IPPU),Uso de productos no energéticos de combustibles y de solvente,2.D. Uso de productos no energéticos de combustibles y de solvente,2
+2.D.1_Uso_de_lubricantes,2.D.1,2,Procesos Industriales y Uso de Productos (IPPU),Uso de lubricantes,2.D.1. Uso de lubricantes,3
+2.D.2_Uso_de_cera_de_parafina,2.D.2,2,Procesos Industriales y Uso de Productos (IPPU),Uso de cera de parafina,2.D.2. Uso de cera de parafina,3
+2.F_Uso_de_productos_sustitutos_de,2.F,2,Procesos Industriales y Uso de Productos (IPPU),Uso de productos sustitutos de las sustancias que agotan la capa de ozono (SAO),2.F. Uso de productos sustitutos de las sustancias que agotan la capa de ozono (SAO),2
+2.F.1_Refrigeración_y_aire_acondicio,2.F.1,2,Procesos Industriales y Uso de Productos (IPPU),Refrigeración y aire acondicionado,2.F.1. Refrigeración y aire acondicionado,3
+2.F.1.a_Refrigeración_comercial,2.F.1.a,2,Procesos Industriales y Uso de Productos (IPPU),Refrigeración comercial,2.F.1.a. Refrigeración comercial,4
+2.F.1.b_Refrigeración_doméstica,2.F.1.b,2,Procesos Industriales y Uso de Productos (IPPU),Refrigeración doméstica,2.F.1.b. Refrigeración doméstica,4
+2.F.1.c_Refrigeración_industrial,2.F.1.c,2,Procesos Industriales y Uso de Productos (IPPU),Refrigeración industrial,2.F.1.c. Refrigeración industrial,4
+2.F.1.d_Transporte_refrigerado,2.F.1.d,2,Procesos Industriales y Uso de Productos (IPPU),Transporte refrigerado,2.F.1.d. Transporte refrigerado,4
+2.F.1.e_Aire_acondicionado_móvil,2.F.1.e,2,Procesos Industriales y Uso de Productos (IPPU),Aire acondicionado móvil,2.F.1.e. Aire acondicionado móvil,4
+2.F.1.f_Aire_acondicionado_estacionari,2.F.1.f,2,Procesos Industriales y Uso de Productos (IPPU),Aire acondicionado estacionario,2.F.1.f. Aire acondicionado estacionario,4
+2.F.2_Agentes_espumantes,2.F.2,2,Procesos Industriales y Uso de Productos (IPPU),Agentes espumantes,2.F.2. Agentes espumantes,3
+2.F.2.b_Celdas_abiertas,2.F.2.b,2,Procesos Industriales y Uso de Productos (IPPU),Celdas abiertas,2.F.2.b. Celdas abiertas,4
+2.F.3_Protección_contra_incendios,2.F.3,2,Procesos Industriales y Uso de Productos (IPPU),Protección contra incendios,2.F.3. Protección contra incendios,3
+2.F.4_Aerosoles,2.F.4,2,Procesos Industriales y Uso de Productos (IPPU),Aerosoles,2.F.4. Aerosoles,3
+2.F.4.a_Inhaladores_dosificadores,2.F.4.a,2,Procesos Industriales y Uso de Productos (IPPU),Inhaladores dosificadores,2.F.4.a. Inhaladores dosificadores,4
+2.F.4.b_Otros,2.F.4.b,2,Procesos Industriales y Uso de Productos (IPPU),Otros,2.F.4.b. Otros,4
+2.F.5_Solventes,2.F.5,2,Procesos Industriales y Uso de Productos (IPPU),Solventes,2.F.5. Solventes,3
+2.F.6_Otras_aplicaciones,2.F.6,2,Procesos Industriales y Uso de Productos (IPPU),Otras aplicaciones,2.F.6. Otras aplicaciones,3
+2.G_Manufactura_y_utilizacion_de_o,2.G,2,Procesos Industriales y Uso de Productos (IPPU),Manufactura y utilizacion de otros productos,2.G. Manufactura y utilizacion de otros productos,2
+2.G.1_Equipos_electrónicos,2.G.1,2,Procesos Industriales y Uso de Productos (IPPU),Equipos electrónicos,2.G.1. Equipos electrónicos,3
+3_Agricultura,3,3,Agricultura (AFOLU),Agricultura,3. Agricultura,1
+3.A_Fermentación_entérica,3.A,3,Agricultura (AFOLU),Fermentación entérica,3.A. Fermentación entérica,2
+3.A.1_Bovinos,3.A.1,3,Agricultura (AFOLU),Bovinos,3.A.1. Bovinos,3
+3.A.1.a_Otro,3.A.1.a,3,Agricultura (AFOLU),Otro,3.A.1.a. Otro,4
+3.A.1.a.iv_Otros,3.A.1.a.iv,3,Agricultura (AFOLU),Otros,3.A.1.a.iv. Otros,5
+3.A.1.a.iv.1_Vacas_de_alta_Producción,3.A.1.a.iv.1,3,Agricultura (AFOLU),Vacas de alta Producción,3.A.1.a.iv.1. Vacas de alta Producción,6
+3.A.1.a.iv.2_Vacas_de_baja_producción,3.A.1.a.iv.2,3,Agricultura (AFOLU),Vacas de baja producción,3.A.1.a.iv.2. Vacas de baja producción,6
+3.A.1.a.iv.3_Vacas_para_producción_de_carne,3.A.1.a.iv.3,3,Agricultura (AFOLU),Vacas para producción de carne,3.A.1.a.iv.3. Vacas para producción de carne,6
+3.A.1.a.iv.4_Toros_utilizados_con_fines_rep,3.A.1.a.iv.4,3,Agricultura (AFOLU),Toros utilizados con fines reproductivos,3.A.1.a.iv.4. Toros utilizados con fines reproductivos,6
+3.A.1.a.iv.5_Terneros_pre_destetos,3.A.1.a.iv.5,3,Agricultura (AFOLU),Terneros pre-destetos,3.A.1.a.iv.5. Terneros pre-destetos,6
+3.A.1.a.iv.6_Novillas_de_reemplazo,3.A.1.a.iv.6,3,Agricultura (AFOLU),Novillas de reemplazo,3.A.1.a.iv.6. Novillas de reemplazo,6
+3.A.1.a.iv.7_Ganado_de_engorde,3.A.1.a.iv.7,3,Agricultura (AFOLU),Ganado de engorde,3.A.1.a.iv.7. Ganado de engorde,6
+3.A.2_Ovinos,3.A.2,3,Agricultura (AFOLU),Ovinos,3.A.2. Ovinos,3
+3.A.2.a_Otro,3.A.2.a,3,Agricultura (AFOLU),Otro,3.A.2.a. Otro,4
+3.A.2.a.i_Ovinos,3.A.2.a.i,3,Agricultura (AFOLU),Ovinos,3.A.2.a.i. Ovinos,5
+3.A.3_Porcionos,3.A.3,3,Agricultura (AFOLU),Porcionos,3.A.3. Porcionos,3
+3.A.3.a_Otro,3.A.3.a,3,Agricultura (AFOLU),Otro,3.A.3.a. Otro,4
+3.A.3.a.i_Porcinos___6_meses,3.A.3.a.i,3,Agricultura (AFOLU),Porcinos < 6 meses,3.A.3.a.i. Porcinos < 6 meses,5
+3.A.3.a.ii_Porcinos___6_meses,3.A.3.a.ii,3,Agricultura (AFOLU),Porcinos > 6 meses,3.A.3.a.ii. Porcinos > 6 meses,5
+3.A.3.a.iii_Porcinos_baja_productividad,3.A.3.a.iii,3,Agricultura (AFOLU),Porcinos baja productividad,3.A.3.a.iii. Porcinos baja productividad,5
+3.A.4_Otro_ganado,3.A.4,3,Agricultura (AFOLU),Otro ganado,3.A.4. Otro ganado,3
+3.A.4.a_Búfalos,3.A.4.a,3,Agricultura (AFOLU),Búfalos,3.A.4.a. Búfalos,4
+3.A.4.d_Caprinos,3.A.4.d,3,Agricultura (AFOLU),Caprinos,3.A.4.d. Caprinos,4
+3.A.4.e_Caballos,3.A.4.e,3,Agricultura (AFOLU),Caballos,3.A.4.e. Caballos,4
+3.A.4.f_Mulas_y_asnos,3.A.4.f,3,Agricultura (AFOLU),Mulas y asnos,3.A.4.f. Mulas y asnos,4
+3.A.4.h_Otros,3.A.4.h,3,Agricultura (AFOLU),Otros,3.A.4.h. Otros,4
+3.A.4.h.v_Otros,3.A.4.h.v,3,Agricultura (AFOLU),Otros,3.A.4.h.v. Otros,5
+3.A.4.h.v.1_Ponedoras,3.A.4.h.v.1,3,Agricultura (AFOLU),Ponedoras,3.A.4.h.v.1. Ponedoras,6
+3.A.4.h.v.2_Pollo_de_engorde,3.A.4.h.v.2,3,Agricultura (AFOLU),Pollo de engorde,3.A.4.h.v.2. Pollo de engorde,6
+3.B_Gestión_del_estiércol,3.B,3,Agricultura (AFOLU),Gestión del estiércol,3.B. Gestión del estiércol,2
+3.B.1_Bovinos,3.B.1,3,Agricultura (AFOLU),Bovinos,3.B.1. Bovinos,3
+3.B.1.a_Otro,3.B.1.a,3,Agricultura (AFOLU),Otro,3.B.1.a. Otro,4
+3.B.1.a.iv_Otros,3.B.1.a.iv,3,Agricultura (AFOLU),Otros,3.B.1.a.iv. Otros,5
+3.B.1.a.iv.1_Vacas_de_alta_Producción,3.B.1.a.iv.1,3,Agricultura (AFOLU),Vacas de alta Producción,3.B.1.a.iv.1. Vacas de alta Producción,6
+3.B.1.a.iv.2_Vacas_de_baja_producción,3.B.1.a.iv.2,3,Agricultura (AFOLU),Vacas de baja producción,3.B.1.a.iv.2. Vacas de baja producción,6
+3.B.1.a.iv.3_Vacas_para_producción_de_carne,3.B.1.a.iv.3,3,Agricultura (AFOLU),Vacas para producción de carne,3.B.1.a.iv.3. Vacas para producción de carne,6
+3.B.1.a.iv.4_Toros_utilizados_con_fines_rep,3.B.1.a.iv.4,3,Agricultura (AFOLU),Toros utilizados con fines reproductivos,3.B.1.a.iv.4. Toros utilizados con fines reproductivos,6
+3.B.1.a.iv.5_Terneros_pre_destetos,3.B.1.a.iv.5,3,Agricultura (AFOLU),Terneros pre-destetos,3.B.1.a.iv.5. Terneros pre-destetos,6
+3.B.1.a.iv.6_Novillas_de_reemplazo,3.B.1.a.iv.6,3,Agricultura (AFOLU),Novillas de reemplazo,3.B.1.a.iv.6. Novillas de reemplazo,6
+3.B.1.a.iv.7_Ganado_de_engorde,3.B.1.a.iv.7,3,Agricultura (AFOLU),Ganado de engorde,3.B.1.a.iv.7. Ganado de engorde,6
+3.B.2_Ovinos,3.B.2,3,Agricultura (AFOLU),Ovinos,3.B.2. Ovinos,3
+3.B.2.a_Otro,3.B.2.a,3,Agricultura (AFOLU),Otro,3.B.2.a. Otro,4
+3.B.2.a.i_Ovinos,3.B.2.a.i,3,Agricultura (AFOLU),Ovinos,3.B.2.a.i. Ovinos,5
+3.B.3_Porcinos,3.B.3,3,Agricultura (AFOLU),Porcinos,3.B.3. Porcinos,3
+3.B.3.a_Otro,3.B.3.a,3,Agricultura (AFOLU),Otro,3.B.3.a. Otro,4
+3.B.3.a.i_Porcinos___6_meses,3.B.3.a.i,3,Agricultura (AFOLU),Porcinos < 6 meses,3.B.3.a.i. Porcinos < 6 meses,5
+3.B.3.a.ii_Porcinos___6_meses,3.B.3.a.ii,3,Agricultura (AFOLU),Porcinos > 6 meses,3.B.3.a.ii. Porcinos > 6 meses,5
+3.B.3.a.iii_Porcinos_baja_productividad,3.B.3.a.iii,3,Agricultura (AFOLU),Porcinos baja productividad,3.B.3.a.iii. Porcinos baja productividad,5
+3.B.4_Otro_ganado,3.B.4,3,Agricultura (AFOLU),Otro ganado,3.B.4. Otro ganado,3
+3.B.4.a_Búfalos,3.B.4.a,3,Agricultura (AFOLU),Búfalos,3.B.4.a. Búfalos,4
+3.B.4.d_Caprinos,3.B.4.d,3,Agricultura (AFOLU),Caprinos,3.B.4.d. Caprinos,4
+3.B.4.e_Caballos,3.B.4.e,3,Agricultura (AFOLU),Caballos,3.B.4.e. Caballos,4
+3.B.4.f_Mulas_y_Asnos,3.B.4.f,3,Agricultura (AFOLU),Mulas y Asnos,3.B.4.f. Mulas y Asnos,4
+3.B.4.h_Otro,3.B.4.h,3,Agricultura (AFOLU),Otro,3.B.4.h. Otro,4
+3.B.4.h.v_Otro,3.B.4.h.v,3,Agricultura (AFOLU),Otro,3.B.4.h.v. Otro,5
+3.B.4.h.v.1_Ponedoras,3.B.4.h.v.1,3,Agricultura (AFOLU),Ponedoras,3.B.4.h.v.1. Ponedoras,6
+3.B.4.h.v.2_Pollos_de_engorde,3.B.4.h.v.2,3,Agricultura (AFOLU),Pollos de engorde,3.B.4.h.v.2. Pollos de engorde,6
+3.B.5_Emisiones_indirectas_de_N2O_de,3.B.5,3,Agricultura (AFOLU),Emisiones indirectas de N2O de gestión de estiércol,3.B.5. Emisiones indirectas de N2O de gestión de estiércol,3
+3.B.5.a_Bovinos,3.B.5.a,3,Agricultura (AFOLU),Bovinos,3.B.5.a. Bovinos,4
+3.B.5.a.i_Vacas_de_Alta_Producción,3.B.5.a.i,3,Agricultura (AFOLU),Vacas de Alta Producción,3.B.5.a.i. Vacas de Alta Producción,5
+3.B.5.a.ii_Vacas_de_Baja_Producción,3.B.5.a.ii,3,Agricultura (AFOLU),Vacas de Baja Producción,3.B.5.a.ii. Vacas de Baja Producción,5
+3.B.5.a.iii_Vacas_para_producción_de_carne,3.B.5.a.iii,3,Agricultura (AFOLU),Vacas para producción de carne,3.B.5.a.iii. Vacas para producción de carne,5
+3.B.5.a.iv_Toros_utilizados_con_fines_rep,3.B.5.a.iv,3,Agricultura (AFOLU),Toros utilizados con fines reproductivos,3.B.5.a.iv. Toros utilizados con fines reproductivos,5
+3.B.5.a.v_Terneros_pre_destetos,3.B.5.a.v,3,Agricultura (AFOLU),Terneros pre-destetos,3.B.5.a.v. Terneros pre-destetos,5
+3.B.5.a.vi_Novillas_de_reemplazo,3.B.5.a.vi,3,Agricultura (AFOLU),Novillas de reemplazo,3.B.5.a.vi. Novillas de reemplazo,5
+3.B.5.a.vii_Ganado_de_engorde,3.B.5.a.vii,3,Agricultura (AFOLU),Ganado de engorde,3.B.5.a.vii. Ganado de engorde,5
+3.B.5.b_Ovinos,3.B.5.b,3,Agricultura (AFOLU),Ovinos,3.B.5.b. Ovinos,4
+3.B.5.c_Porcinos,3.B.5.c,3,Agricultura (AFOLU),Porcinos,3.B.5.c. Porcinos,4
+3.B.5.c.i_Porcinos___6_meses,3.B.5.c.i,3,Agricultura (AFOLU),Porcinos < 6 meses,3.B.5.c.i. Porcinos < 6 meses,5
+3.B.5.c.ii_Porcinos___6_meses,3.B.5.c.ii,3,Agricultura (AFOLU),Porcinos > 6 meses,3.B.5.c.ii. Porcinos > 6 meses,5
+3.B.5.c.iii_Porcinos_baja_productividad,3.B.5.c.iii,3,Agricultura (AFOLU),Porcinos baja productividad,3.B.5.c.iii. Porcinos baja productividad,5
+3.B.5.d_Otro_Ganado,3.B.5.d,3,Agricultura (AFOLU),Otro Ganado,3.B.5.d. Otro Ganado,4
+3.B.5.d.i_Búfalos,3.B.5.d.i,3,Agricultura (AFOLU),Búfalos,3.B.5.d.i. Búfalos,5
+3.B.5.d.ii_Caprinos,3.B.5.d.ii,3,Agricultura (AFOLU),Caprinos,3.B.5.d.ii. Caprinos,5
+3.B.5.d.iii_Caballos,3.B.5.d.iii,3,Agricultura (AFOLU),Caballos,3.B.5.d.iii. Caballos,5
+3.B.5.d.iv_Mulas_y_asnos,3.B.5.d.iv,3,Agricultura (AFOLU),Mulas y asnos,3.B.5.d.iv. Mulas y asnos,5
+3.B.5.d.v_Aves_de_corral,3.B.5.d.v,3,Agricultura (AFOLU),Aves de corral,3.B.5.d.v. Aves de corral,5
+3.C_Cultivo_de_arroz,3.C,3,Agricultura (AFOLU),Cultivo de arroz,3.C. Cultivo de arroz,2
+3.C.1_Arroz_riego,3.C.1,3,Agricultura (AFOLU),Arroz riego,3.C.1. Arroz riego,3
+3.C.1.a_Continuamente_inundado,3.C.1.a,3,Agricultura (AFOLU),Continuamente inundado,3.C.1.a. Continuamente inundado,4
+3.C.1.b_Inundado_intermitentemente,3.C.1.b,3,Agricultura (AFOLU),Inundado intermitentemente,3.C.1.b. Inundado intermitentemente,4
+3.C.1.b.i_Aireación_simple,3.C.1.b.i,3,Agricultura (AFOLU),Aireación simple,3.C.1.b.i. Aireación simple,5
+3.C.1.b.ii_Aireación_múltiple,3.C.1.b.ii,3,Agricultura (AFOLU),Aireación múltiple,3.C.1.b.ii. Aireación múltiple,5
+3.C.2_Arroz_secano,3.C.2,3,Agricultura (AFOLU),Arroz secano,3.C.2. Arroz secano,3
+3.C.2.b_Propenso_a_la_sequía,3.C.2.b,3,Agricultura (AFOLU),Propenso a la sequía,3.C.2.b. Propenso a la sequía,4
+3.D_Suelos_agrícolas,3.D,3,Agricultura (AFOLU),Suelos agrícolas,3.D. Suelos agrícolas,2
+3.D.1_Emisiones_directas_de_N2O_de_s,3.D.1,3,Agricultura (AFOLU),Emisiones directas de N2O de suelos gestionados,3.D.1 Emisiones directas de N2O de suelos gestionados,3
+3.D.1.a_Fertilizantes_N_inorgánicos,3.D.1.a,3,Agricultura (AFOLU),Fertilizantes N inorgánicos,3.D.1.a. Fertilizantes N inorgánicos,4
+3.D.1.b_Fertilizantes_orgánicos_N,3.D.1.b,3,Agricultura (AFOLU),Fertilizantes orgánicos N,3.D.1.b. Fertilizantes orgánicos N,4
+3.D.1.b.i_Estiercol_animal_aplicado_a_lo,3.D.1.b.i,3,Agricultura (AFOLU),Estiercol animal aplicado a los suelos,3.D.1.b.i. Estiercol animal aplicado a los suelos,5
+3.D.1.c_Orina_y_estiércol_depositado_p,3.D.1.c,3,Agricultura (AFOLU),Orina y estiércol depositado por animales en pastoreo,3.D.1.c. Orina y estiércol depositado por animales en pastoreo,4
+3.D.1.d_Residuos_de_cosecha,3.D.1.d,3,Agricultura (AFOLU),Residuos de cosecha,3.D.1.d. Residuos de cosecha,4
+3.D.1.e_Mineralización_inmovilización_,3.D.1.e,3,Agricultura (AFOLU),Mineralización/inmovilización asociada a pérdida/ganancia de materia orgánica del suelo,3.D.1.e. Mineralización/inmovilización asociada a pérdida/ganancia de materia orgánica del suelo,4
+3.D.1.f_Cultivo_de_suelos_orgánicos__H,3.D.1.f,3,Agricultura (AFOLU),Cultivo de suelos orgánicos (Histosoles),3.D.1.f. Cultivo de suelos orgánicos (Histosoles),4
+3.D.2_Emisiones_indirectas_de_N2O_de,3.D.2,3,Agricultura (AFOLU),Emisiones indirectas de N2O de suelos gestionados,3.D.2. Emisiones indirectas de N2O de suelos gestionados,3
+3.D.2.a_Deposición_atmosférica,3.D.2.a,3,Agricultura (AFOLU),Deposición atmosférica,3.D.2.a. Deposición atmosférica,4
+3.D.2.a.i_Deposición_atmosférica___Ferti,3.D.2.a.i,3,Agricultura (AFOLU),Deposición atmosférica - Fertilizantes N inorgánicos,3.D.2.a.i. Deposición atmosférica - Fertilizantes N inorgánicos,5
+3.D.2.a.ii_Deposición_atmosférica___Ferti,3.D.2.a.ii,3,Agricultura (AFOLU),Deposición atmosférica - Fertilizantes N orgánicos,3.D.2.a.ii. Deposición atmosférica - Fertilizantes N orgánicos,5
+3.D.2.a.iii_Deposición_atmosférica___Orina,3.D.2.a.iii,3,Agricultura (AFOLU),Deposición atmosférica - Orina y estiércol de animales en pastoreo,3.D.2.a.iii. Deposición atmosférica - Orina y estiércol de animales en pastoreo,5
+3.D.2.b_Lixiviación_y_escorrentía_de_n,3.D.2.b,3,Agricultura (AFOLU),Lixiviación y escorrentía de nitrógeno,3.D.2.b. Lixiviación y escorrentía de nitrógeno,4
+3.D.2.b.i_Lixiviación_y_escorrentía_Fert,3.D.2.b.i,3,Agricultura (AFOLU),Lixiviación y escorrentía Fertilizantes N inorgánicos,3.D.2.b.i. Lixiviación y escorrentía Fertilizantes N inorgánicos,5
+3.D.2.b.ii_Lixiviación_y_escorrentía_Fert,3.D.2.b.ii,3,Agricultura (AFOLU),Lixiviación y escorrentía Fertilizantes N orgánicos,3.D.2.b.ii. Lixiviación y escorrentía Fertilizantes N orgánicos,5
+3.D.2.b.iii_Lixiviación_y_escorrentía_Resi,3.D.2.b.iii,3,Agricultura (AFOLU),Lixiviación y escorrentía Residuos de cosecha,3.D.2.b.iii. Lixiviación y escorrentía Residuos de cosecha,5
+3.D.2.b.iv_Lixiviación_y_escorrentía_Mine,3.D.2.b.iv,3,Agricultura (AFOLU),Lixiviación y escorrentía Mineralización/inmovilización asociada a pérdida/ganancia de materia orgánica del suelo,3.D.2.b.iv. Lixiviación y escorrentía Mineralización/inmovilización asociada a pérdida/ganancia de materia orgánica del suelo,5
+3.D.2.b.v_Lixiviación_y_escorrentía___Or,3.D.2.b.v,3,Agricultura (AFOLU),Lixiviación y escorrentía - Orina y estiércol de animales en pastoreo,3.D.2.b.v. Lixiviación y escorrentía - Orina y estiércol de animales en pastoreo,5
+3.F_Quema_de_residuos_agrícolas_en,3.F,3,Agricultura (AFOLU),Quema de residuos agrícolas en el campo,3.F. Quema de residuos agrícolas en el campo,2
+3.F.1_Cereales,3.F.1,3,Agricultura (AFOLU),Cereales,3.F.1. Cereales,3
+3.F.1.c_Maíz,3.F.1.c,3,Agricultura (AFOLU),Maíz,3.F.1.c. Maíz,4
+3.F.1.d_Otros__especifique_,3.F.1.d,3,Agricultura (AFOLU),Otros (especifique),3.F.1.d. Otros (especifique),4
+3.F.1.d.i_Arroz,3.F.1.d.i,3,Agricultura (AFOLU),Arroz,3.F.1.d.i Arroz,5
+3.F.4_Caña_de_azúcar,3.F.4,3,Agricultura (AFOLU),Caña de azúcar,3.F.4. Caña de azúcar,3
+3.F.5_Otros,3.F.5,3,Agricultura (AFOLU),Otros,3.F.5. Otros,3
+3.G_Encalado,3.G,3,Agricultura (AFOLU),Encalado,3.G. Encalado,2
+3.G.2_Dolomita_CaMg_CO3_2,3.G.2,3,Agricultura (AFOLU),Dolomita CaMg(CO3)2,3.G.2. Dolomita CaMg(CO3)2,3
+3.H_Aplicación_de_urea,3.H,3,Agricultura (AFOLU),Aplicación de urea,3.H. Aplicación de urea,2
+4(II).D_Humedales,4(II).D,4,Silvicultura y Otros Usos de la Tierra (FOLU),Humedales,4(II).D. Humedales,2
+4(II).D.1.Humedales_que_permanecen_como_tales,4(II).D.1.Humedales,4,Silvicultura y Otros Usos de la Tierra (FOLU),que permanecen como tales,4(II).D.1.Humedales que permanecen como tales,4
+4(II).D.1.b_Tierras_inundadas_que_permanec,4(II).D.1.b,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras inundadas que permanecen como tales,4(II).D.1.b. Tierras inundadas que permanecen como tales,4
+4(IV)_Quema_de_biomasa,4(IV),4,Silvicultura y Otros Usos de la Tierra (FOLU),Quema de biomasa,4(IV). Quema de biomasa,1
+4(IV).A_Tierras_forestales,4(IV).A,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras forestales,4(IV).A. Tierras forestales,2
+4(IV).A.1_Tierras_forestales_que_permane,4(IV).A.1,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras forestales que permanecen como tales,4(IV).A.1. Tierras forestales que permanecen como tales,3
+4(IV).A.1.b_Incendios_forestales,4(IV).A.1.b,4,Silvicultura y Otros Usos de la Tierra (FOLU),Incendios forestales,4(IV).A.1.b. Incendios forestales,4
+4(IV).C_Pastizales,4(IV).C,4,Silvicultura y Otros Usos de la Tierra (FOLU),Pastizales,4(IV).C. Pastizales,2
+4(IV).C.1_Pastizales_que_permanecen_como,4(IV).C.1,4,Silvicultura y Otros Usos de la Tierra (FOLU),Pastizales que permanecen como tales,4(IV).C.1. Pastizales que permanecen como tales,3
+4(IV).C.1.b_Incendios_forestales,4(IV).C.1.b,4,Silvicultura y Otros Usos de la Tierra (FOLU),Incendios forestales,4(IV).C.1.b. Incendios forestales,4
+4_Silvicultura__uso_y_cambio_de_,4,4,Silvicultura y Otros Usos de la Tierra (FOLU),"Silvicultura, uso y cambio de uso de la tierra","4. Silvicultura, uso y cambio de uso de la tierra",1
+4.(II)_Emisiones_y_absorciones_proven,4.(II),4,Silvicultura y Otros Usos de la Tierra (FOLU),Emisiones y absorciones provenientes del drenaje y rehumedecimiento y otros manejos de suelos orgánicos y minerales,4.(II). Emisiones y absorciones provenientes del drenaje y rehumedecimiento y otros manejos de suelos orgánicos y minerales,2
+4.A_Tierras_forestales,4.A,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras forestales,4.A. Tierras forestales,2
+4.A.1_Tierras_forestales_que_permane,4.A.1,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras forestales que permanecen como tales,4.A.1. Tierras forestales que permanecen como tales,3
+4.A.1.a_Tierras_forestales_que_permane,4.A.1.a,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras forestales que permanecen como tales (Consumo de leña),4.A.1.a. Tierras forestales que permanecen como tales (Consumo de leña),4
+4.A.1.b_Tierras_forestales_que_permane,4.A.1.b,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras forestales que permanecen como tales (Degradación),4.A.1.b. Tierras forestales que permanecen como tales (Degradación),4
+4.A.1.c_Tierras_forestales_que_permane,4.A.1.c,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras forestales que permanecen como tales (Conversión de bosque natural a tierras forestales),4.A.1.c. Tierras forestales que permanecen como tales (Conversión de bosque natural a tierras forestales),4
+4.A.1.d_Tierras_forestales_que_permane,4.A.1.d,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras forestales que permanecen como tales (Plantaciones forestales comerciales),4.A.1.d. Tierras forestales que permanecen como tales (Plantaciones forestales comerciales),4
+4.A.2_Tierras_convertidas_a_tierras_,4.A.2,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras convertidas a tierras forestales,4.A.2. Tierras convertidas a tierras forestales,3
+4.B_Tierras_de_cultivo,4.B,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras de cultivo,4.B. Tierras de cultivo,2
+4.B.1_Tierras_de_cultivo_que_permane,4.B.1,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras de cultivo que permanecen como tales,4.B.1. Tierras de cultivo que permanecen como tales,3
+4.B.1.a_Cultivo_de_cafééé,4.B.1.a,4,Silvicultura y Otros Usos de la Tierra (FOLU),Cultivo de cafééé,4.B.1.a. Cultivo de caféé,4
+4.B.1.b_Palma_de_aceite,4.B.1.b,4,Silvicultura y Otros Usos de la Tierra (FOLU),Palma de aceite,4.B.1.b. Palma de aceite,4
+4.B.1.c_Cacao,4.B.1.c,4,Silvicultura y Otros Usos de la Tierra (FOLU),Cacao,4.B.1.c. Cacao,4
+4.B.1.d_Aguacate,4.B.1.d,4,Silvicultura y Otros Usos de la Tierra (FOLU),Aguacate,4.B.1.d. Aguacate,4
+4.B.1.e_Caucho,4.B.1.e,4,Silvicultura y Otros Usos de la Tierra (FOLU),Caucho,4.B.1.e. Caucho,4
+4.B.1.f_Mango,4.B.1.f,4,Silvicultura y Otros Usos de la Tierra (FOLU),Mango,4.B.1.f. Mango,4
+4.B.1.g_Limón,4.B.1.g,4,Silvicultura y Otros Usos de la Tierra (FOLU),Limón,4.B.1.g. Limón,4
+4.B.1.h_Mandarina,4.B.1.h,4,Silvicultura y Otros Usos de la Tierra (FOLU),Mandarina,4.B.1.h. Mandarina,4
+4.B.1.i_Naranja,4.B.1.i,4,Silvicultura y Otros Usos de la Tierra (FOLU),Naranja,4.B.1.i. Naranja,4
+4.B.1.j_Tangelo,4.B.1.j,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tangelo,4.B.1.j. Tangelo,4
+4.B.1.k_Marañón,4.B.1.k,4,Silvicultura y Otros Usos de la Tierra (FOLU),Marañón,4.B.1.k. Marañón,4
+4.B.1.l_Otro,4.B.1.l,4,Silvicultura y Otros Usos de la Tierra (FOLU),Otro,4.B.1.l. Otro,4
+4.B.2_Tierras_convertidas_a_tierras_,4.B.2,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras convertidas a tierras de cultivo,4.B.2. Tierras convertidas a tierras de cultivo,3
+4.B.2.a_Tierras_forestales_covertidas_,4.B.2.a,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras forestales covertidas a tierras de cultivo,4.B.2.a. Tierras forestales covertidas a tierras de cultivo,4
+4.C_Pastizales,4.C,4,Silvicultura y Otros Usos de la Tierra (FOLU),Pastizales,4.C. Pastizales,2
+4.C.1_Pastizales_que_permanecen_como,4.C.1,4,Silvicultura y Otros Usos de la Tierra (FOLU),Pastizales que permanecen como tales,4.C.1. Pastizales que permanecen como tales,3
+4.C.2_Tierras_convertidas_a_pastizal,4.C.2,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras convertidas a pastizales,4.C.2. Tierras convertidas a pastizales,3
+4.C.2.a_Tierras_forestales_convertidas,4.C.2.a,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras forestales convertidas a pastizales,4.C.2.a. Tierras forestales convertidas a pastizales,4
+4.C.2.b_Tierras_de_cultivo_convertidas,4.C.2.b,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras de cultivo convertidas a pastizales,4.C.2.b. Tierras de cultivo convertidas a pastizales,4
+4.C.2.b.ii_Tierras_de_cultivo_convertidas,4.C.2.b.ii,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras de cultivo convertidas a pastizales,4.C.2.b.ii. Tierras de cultivo convertidas a pastizales,5
+4.D_Humedales,4.D,4,Silvicultura y Otros Usos de la Tierra (FOLU),Humedales,4.D. Humedales,2
+4.D.1_Humedales_que_permanecen_como_,4.D.1,4,Silvicultura y Otros Usos de la Tierra (FOLU),Humedales que permanecen como tales,4.D.1 Humedales que permanecen como tales,3
+4.D.1.b_Tierras_inundadas_que_permanec,4.D.1.b,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras inundadas que permanecen como tales,4.D.1.b. Tierras inundadas que permanecen como tales,4
+4.D.2_Tierras_convertidas_a_humedale,4.D.2,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras convertidas a humedales,4.D.2. Tierras convertidas a humedales,3
+4.D.2.b_Tierras_convertidas_a_tierras_,4.D.2.b,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras convertidas a tierras inundadas,4.D.2.b. Tierras convertidas a tierras inundadas,4
+4.D.2.b.i_Tierras_forestales_convertidas,4.D.2.b.i,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras forestales convertidas a tierras inundadas,4.D.2.b.i. Tierras forestales convertidas a tierras inundadas,5
+4.D.2.c_Tierras_convertidas_a_otros_hu,4.D.2.c,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras convertidas a otros humedales,4.D.2.c. Tierras convertidas a otros humedales,4
+4.D.2.c.ii_Tierras_de_cultivo_convertidas,4.D.2.c.ii,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras de cultivo convertidas a otros humedales,4.D.2.c.ii. Tierras de cultivo convertidas a otros humedales,5
+4.D.2.c.ii.1_Tierras_de_cultivo_a_humedales,4.D.2.c.ii.1,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras de cultivo a humedales de tierras bajas y medias,4.D.2.c.ii.1. Tierras de cultivo a humedales de tierras bajas y medias,6
+4.D.2.c.ii.2_Tierras_de_cultivo_a_humedales,4.D.2.c.ii.2,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras de cultivo a humedales costeros,4.D.2.c.ii.2. Tierras de cultivo a humedales costeros,6
+4.E_Asentamientos,4.E,4,Silvicultura y Otros Usos de la Tierra (FOLU),Asentamientos,4.E. Asentamientos,2
+4.E.1_Asentamientos_que_permanecen_c,4.E.1,4,Silvicultura y Otros Usos de la Tierra (FOLU),Asentamientos que permanecen como tales,4.E.1. Asentamientos que permanecen como tales,3
+4.E.2_Tierras_convertidas_a_asentami,4.E.2,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras convertidas a asentamientos,4.E.2. Tierras convertidas a asentamientos,3
+4.E.2.a_Tierras_forestales_convertidas,4.E.2.a,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras forestales convertidas a asentamientos,4.E.2.a. Tierras forestales convertidas a asentamientos,4
+4.F_Otras_tierras,4.F,4,Silvicultura y Otros Usos de la Tierra (FOLU),Otras tierras,4.F. Otras tierras,2
+4.F.2_Tierras_convertidas_a_otras_ti,4.F.2,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras convertidas a otras tierras,4.F.2. Tierras convertidas a otras tierras,3
+4.F.2.a_Tierras_forestales_convertidas,4.F.2.a,4,Silvicultura y Otros Usos de la Tierra (FOLU),Tierras forestales convertidas a otras tierras,4.F.2.a. Tierras forestales convertidas a otras tierras,4
+4.G_Productos_de_la_madera_recolec,4.G,4,Silvicultura y Otros Usos de la Tierra (FOLU),Productos de la madera recolectada (Consumo doméstico),4.G. Productos de la madera recolectada (Consumo doméstico),2
+4.G.1_Madera_maciza,4.G.1,4,Silvicultura y Otros Usos de la Tierra (FOLU),Madera maciza,4.G.1. Madera maciza,3
+4.G.1.a_Madera_aserrada,4.G.1.a,4,Silvicultura y Otros Usos de la Tierra (FOLU),Madera aserrada,4.G.1.a. Madera aserrada,4
+4.G.1.b_Paneles_de_madera,4.G.1.b,4,Silvicultura y Otros Usos de la Tierra (FOLU),Paneles de madera,4.G.1.b. Paneles de madera,4
+4.G.2_Papel_y_cartón,4.G.2,4,Silvicultura y Otros Usos de la Tierra (FOLU),Papel y cartón,4.G.2. Papel y cartón,3
+4.G.2.a_Otros,4.G.2.a,4,Silvicultura y Otros Usos de la Tierra (FOLU),Otros,4.G.2.a. Otros,4
+5_Residuos,5,5,Residuos,Residuos,5. Residuos,1
+5.A_Eliminación_de_residuos_sólido,5.A,5,Residuos,Eliminación de residuos sólidos,5.A. Eliminación de residuos sólidos,2
+5.A.1_Sitios_gestionado_de_residuos_,5.A.1,5,Residuos,Sitios gestionado de residuos sólidos,5.A.1 Sitios gestionado de residuos sólidos,3
+5.A.1.a_Anaeróbico,5.A.1.a,5,Residuos,Anaeróbico,5.A.1.a. Anaeróbico,4
+5.A.1.a.iv_Residuos_voluminosos,5.A.1.a.iv,5,Residuos,Residuos voluminosos,5.A.1.a.iv. Residuos voluminosos,5
+5.A.3_Sitios_no_categorizados_de_eli,5.A.3,5,Residuos,Sitios no categorizados de eliminación de residuos,5.A.3. Sitios no categorizados de eliminación de residuos,3
+5.A.3.d_Granel___Sin_fracciones_de_res,5.A.3.d,5,Residuos,Granel - Sin fracciones de residuos,5.A.3.d Granel - Sin fracciones de residuos,4
+5.C_Incineración_e_incineración_ab,5.C,5,Residuos,Incineración e incineración abierta de residuos,5.C. Incineración e incineración abierta de residuos,2
+5.C.1_Incineración_de_residuos,5.C.1,5,Residuos,Incineración de residuos,5.C.1. Incineración de residuos,3
+5.C.1.a_Biogénicos,5.C.1.a,5,Residuos,Biogénicos,5.C.1.a. Biogénicos,4
+5.C.1.a.ii_Otros,5.C.1.a.ii,5,Residuos,Otros,5.C.1.a.ii Otros,5
+5.C.1.b_No_biogénicos,5.C.1.b,5,Residuos,No biogénicos,5.C.1.b. No biogénicos,4
+5.C.1.b.ii_Otros,5.C.1.b.ii,5,Residuos,Otros,5.C.1.b.ii Otros,5
+5.C.1.b.ii.2_Residuos_peligrosos,5.C.1.b.ii.2,5,Residuos,Residuos peligrosos,5.C.1.b.ii.2. Residuos peligrosos,6
+5.C.1.b.ii.3_Residuos_hospitalarios,5.C.1.b.ii.3,5,Residuos,Residuos hospitalarios,5.C.1.b.ii.3. Residuos hospitalarios,6
+5.C.1.b.ii.5_Residuos_liquidos_fósiles,5.C.1.b.ii.5,5,Residuos,Residuos liquidos fósiles,5.C.1.b.ii.5. Residuos liquidos fósiles,6
+5.C.2_Incineración_abierta_de_residu,5.C.2,5,Residuos,Incineración abierta de residuos,5.C.2. Incineración abierta de residuos,3
+5.C.2.b_No_biogénicos,5.C.2.b,5,Residuos,No biogénicos,5.C.2.b. No biogénicos,4
+5.C.2.b.i_Residuos_sólidos_municipales,5.C.2.b.i,5,Residuos,Residuos sólidos municipales,5.C.2.b.i. Residuos sólidos municipales,5
+5.D_Tratamiento_y_eliminación_de_a,5.D,5,Residuos,Tratamiento y eliminación de aguas residuales,5.D. Tratamiento y eliminación de aguas residuales,2
+5.D.1.Tratamiento_y_eliminación_de_aguas_residua,5.D.1.Tratamiento,5,Residuos,y eliminación de aguas residuales domésticas,5.D.1.Tratamiento y eliminación de aguas residuales domésticas,4
+5.D.2_Tratamiento_y_eliminación_agua,5.D.2,5,Residuos,Tratamiento y eliminación aguas residuales industriales,5.D.2. Tratamiento y eliminación aguas residuales industriales,3
+5.D.2.a_Aceites_vegetales,5.D.2.a,5,Residuos,Aceites vegetales,5.D.2.a. Aceites vegetales,4
+5.D.2.b_Alimentos_para_animales,5.D.2.b,5,Residuos,Alimentos para animales,5.D.2.b. Alimentos para animales,4
+5.D.2.c_Cafééé,5.D.2.c,5,Residuos,Cafééé,5.D.2.c. Caféé,4
+5.D.2.d_Carnes_y_aves,5.D.2.d,5,Residuos,Carnes y aves,5.D.2.d. Carnes y aves,4
+5.D.2.e_Fertilizantes_nitrogenados,5.D.2.e,5,Residuos,Fertilizantes nitrogenados,5.D.2.e. Fertilizantes nitrogenados,4
+5.D.2.f_Jabón_y_detergentes,5.D.2.f,5,Residuos,Jabón y detergentes,5.D.2.f. Jabón y detergentes,4
+5.D.2.g_Malta_y_cerveza,5.D.2.g,5,Residuos,Malta y cerveza,5.D.2.g. Malta y cerveza,4
+5.D.2.h_Manufactura_de_hierro_y_acero,5.D.2.h,5,Residuos,Manufactura de hierro y acero,5.D.2.h. Manufactura de hierro y acero,4
+5.D.2.i_Medicamentos,5.D.2.i,5,Residuos,Medicamentos,5.D.2.i. Medicamentos,4
+5.D.2.j_Otros_alimentos,5.D.2.j,5,Residuos,Otros alimentos,5.D.2.j. Otros alimentos,4
+5.D.2.k_Otras_bebidas,5.D.2.k,5,Residuos,Otras bebidas,5.D.2.k. Otras bebidas,4
+5.D.2.l_Pinturas,5.D.2.l,5,Residuos,Pinturas,5.D.2.l. Pinturas,4
+5.D.2.m_Plásticos_y_resinas,5.D.2.m,5,Residuos,Plásticos y resinas,5.D.2.m. Plásticos y resinas,4
+5.D.2.n_Procesamiento_del_pescado,5.D.2.n,5,Residuos,Procesamiento del pescado,5.D.2.n. Procesamiento del pescado,4
+5.D.2.o_Producción_de_almidón,5.D.2.o,5,Residuos,Producción de almidón,5.D.2.o. Producción de almidón,4
+5.D.2.p_Productos_lácteos,5.D.2.p,5,Residuos,Productos lácteos,5.D.2.p. Productos lácteos,4
+5.D.2.q_Pulpa_y_papel__combinados_,5.D.2.q,5,Residuos,Pulpa y papel (combinados),5.D.2.q. Pulpa y papel (combinados),4
+5.D.2.r_Refinación_del_azúcar,5.D.2.r,5,Residuos,Refinación del azúcar,5.D.2.r. Refinación del azúcar,4
+5.D.2.s_Refinado_de_alcohol,5.D.2.s,5,Residuos,Refinado de alcohol,5.D.2.s. Refinado de alcohol,4
+5.D.2.t_Refinerías_de_petróleo,5.D.2.t,5,Residuos,Refinerías de petróleo,5.D.2.t. Refinerías de petróleo,4
+5.D.2.u_Sustancias_químicas_orgánicas,5.D.2.u,5,Residuos,Sustancias químicas orgánicas,5.D.2.u. Sustancias químicas orgánicas,4
+5.D.2.v_Textiles__naturales_,5.D.2.v,5,Residuos,Textiles (naturales),5.D.2.v. Textiles (naturales),4
+5.D.2.w_Verduras__frutas_y_zumos,5.D.2.w,5,Residuos,"Verduras, frutas y zumos","5.D.2.w. Verduras, frutas y zumos",4
+5.D.2.x_Vino_y_vinagre,5.D.2.x,5,Residuos,Vino y vinagre,5.D.2.x. Vino y vinagre,4
+0_Total_Nacional_Consolidado,0,0,Total Nacional Consolidado,Total Nacional Consolidado,Nacional,0

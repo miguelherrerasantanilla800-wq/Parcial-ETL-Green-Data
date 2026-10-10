@@ -505,5 +505,3 @@ ORDER BY f.aqi DESC;
 1. **Prioridad en Descarbonización del Sector Energía (40.7%):** El transporte vehicular y la generación termoeléctrica concentran el mayor crecimiento ($CAGR = +1.06\%$ anual). Se requiere acelerar la electrificación de flotas y matrices renovables.
 2. **Preservación de Sumideros Forestales (FOLU):** Las absorciones forestales mitigan más de $12,000\text{ kt } CO_2eq$ anuales. Combatir la deforestación en la Amazonía y cordilleras es vital para mantener la meta de carbono neutralidad 2050.
 3. **Puntos Críticos Urbanos en Calidad del Aire:** Las estaciones urbanas (como Centro de Alto Rendimiento y Kennedy en Bogotá) presentan concentraciones de $PM_{2.5}$ en rango *Moderado/Alerta*, correlacionadas con las emisiones del transporte diésel y combustión fósil.
-#   P a r c i a l - E T L - G r e e n - D a t a  
- 

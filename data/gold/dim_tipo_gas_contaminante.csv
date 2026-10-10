@@ -1,0 +1,27 @@
+﻿gas_codigo,nombre_completo,categoria_ambiental,potencial_gwp_ar5,unidad_estandar,impacto_principal
+CO2,Dióxido de Carbono,GEI Directo,1.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+CH4,Metano,GEI Directo,28.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+N2O,Óxido Nitroso,GEI Directo,265.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+SF6,Hexafluoruro de Azufre,Gas Fluorado,23500.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+HFC-125,Hidrofluorocarbono 125,Gas Fluorado,3170.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+HFC-134a,Hidrofluorocarbono 134a,Gas Fluorado,1300.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+HFC-143a,Hidrofluorocarbono 143a,Gas Fluorado,4800.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+HFC-227ea,Hidrofluorocarbono 227ea,Gas Fluorado,3350.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+HFC-23,Trifluorometano (HFC-23),Gas Fluorado,12400.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+HFC-236fa,Hidrofluorocarbono 236fa,Gas Fluorado,8060.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+HFC-32,Difluorometano (HFC-32),Gas Fluorado,677.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+HFC-152a,Hidrofluorocarbono 152a,Gas Fluorado,138.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+HFC-245fa,Hidrofluorocarbono 245fa,Gas Fluorado,858.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+HFC-365mfc,Hidrofluorocarbono 365mfc,Gas Fluorado,804.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+HFC-4310mee,Hidrofluorocarbono 4310mee,Gas Fluorado,1650.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+PFC-14,Tetrafluorometano (CF4),Gas Fluorado,6630.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+PFC-218,Octafluoropropano (C3F8),Gas Fluorado,8900.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+R-116 / PFC-116,Hexafluoroetano (C2F6),Gas Fluorado,11100.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+HFO-1234yf,Hidrofluoroolefina 1234yf,HFO,1.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+HFO-1234ze,Hidrofluoroolefina 1234ze,HFO,1.0,kt CO2eq,Calentamiento Global / Efecto Invernadero
+PM2.5,Material Particulado fino (< 2.5 µm),Contaminante Criterio,0.0,µg/m³,Salud Respiratoria y Cardiovascular
+PM10,Material Particulado grueso (< 10 µm),Contaminante Criterio,0.0,µg/m³,Afección Vías Respiratorias Superiores
+O3,Ozono Troposférico,Contaminante Criterio,0.0,ppb,Smog Fotoquímico y Daño Pulmonar
+NO2,Dióxido de Nitrógeno,Contaminante Criterio,0.0,ppb,Inflamación Pulmonar y Lluvia Ácida
+SO2,Dióxido de Azufre,Contaminante Criterio,0.0,ppb,Acidificación y Trastornos Respiratorios
+CO,Monóxido de Carbono,Contaminante Criterio,0.0,ppm,Hipoxia y Toxicidad Sanguínea
