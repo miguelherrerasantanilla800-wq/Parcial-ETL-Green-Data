@@ -1,6 +1,6 @@
 # 🌿 Green Data ETL Pipeline — Arquitectura Medallion
 
-Pipeline de **Extracción, Transformación y Carga (ETL)** diseñado bajo la **Arquitectura Medallion (Bronze, Silver y Gold)** para la integración, limpieza y análisis de datos ambientales estratégicos: el **Inventario Nacional de Gases de Efecto Invernadero (GEI) de Colombia (1990–2024)** y la **Red de Monitoreo de Calidad del Aire en Tiempo Real (API REST WAQI)**.
+Pipeline de **Extracción, Transformación y Carga (ETL)** diseñado bajo la **Arquitectura Medallion (Bronze, Silver y Gold)** para la integración, limpieza y análisis de datos ambientales estratégicos: el **Inventario Nacional de Gases de Efecto Invernadero (GEI) de Colombia (1990–2024)** y las mediciones de calidad del aire consultadas mediante la **API REST WAQI**.
 
 ---
 
@@ -13,9 +13,11 @@ Pipeline de **Extracción, Transformación y Carga (ETL)** diseñado bajo la **A
 5. [Fuentes de Información](#-fuentes-de-información)
 6. [Detalle de Transformaciones por Capa](#-detalle-de-transformaciones-por-capa)
 7. [Gobernanza y Auditoría de Calidad de Datos](#-gobernanza-y-auditoría-de-calidad-de-datos)
-8. [Estructura del Repositorio](#-estructura-del-repositorio)
-9. [Guía de Instalación y Ejecución](#-guía-de-instalación-y-ejecución)
-10. [Consultas Analíticas SQL y Toma de Decisiones](#-consultas-analíticas-sql-y-toma-de-decisiones)
+8. [Aplicación Web: Backend FastAPI y Frontend React/Vite](#-aplicación-web-backend-fastapi-y-frontend-reactvite)
+9. [Estructura del Repositorio](#-estructura-del-repositorio)
+10. [Guía de Instalación y Ejecución](#-guía-de-instalación-y-ejecución)
+11. [Consultas Analíticas SQL y Toma de Decisiones](#-consultas-analíticas-sql-y-toma-de-decisiones)
+12. [Verificación, Preguntas Frecuentes y Glosario](#-verificación-preguntas-frecuentes-y-glosario)
 
 ---
 
@@ -23,8 +25,8 @@ Pipeline de **Extracción, Transformación y Carga (ETL)** diseñado bajo la **A
 
 El objetivo principal es construir un flujo de datos robusto, escalable y reproducible en **Python** que unifique dos fuentes ambientales clave:
 
-1. **Fuente Tabular / Batch (Excel):** Serie histórica oficial de inventario de gases de efecto invernadero (12,156 registros, 47 variables, 35 años: 1990–2024, categorizado por directrices IPCC).
-2. **Fuente Streaming / API REST:** Mediciones en tiempo real de contaminantes criterio del aire ($PM_{2.5}$, $PM_{10}$, $O_3$, $NO_2$, $SO_2$, $CO$) e Índice de Calidad del Aire (AQI) provistos por el proyecto *World Air Quality Index* (WAQI).
+1. **Fuente Tabular / Batch (Excel):** Serie histórica oficial de inventario de gases de efecto invernadero (aproximadamente 12 mil registros, categorizados por directrices IPCC para el periodo 1990–2024).
+2. **Fuente API REST:** Mediciones recientes de contaminantes criterio del aire ($PM_{2.5}$, $PM_{10}$, $O_3$, $NO_2$, $SO_2$, $CO$) e Índice de Calidad del Aire (AQI) provistos por el proyecto *World Air Quality Index* (WAQI). La API se consulta al ejecutar Bronze; no se mantiene una transmisión continua.
 
 A través del pipeline, los datos sin procesar se transforman progresivamente en un **Data Warehouse analítico en SQLite** y un **Reporte Ejecutivo en Excel**, permitiendo a tomadores de decisiones evaluar trayectorias de descarbonización, cumplimiento de las NDC 2030 y alertas tempranas de contaminación urbana.
 
@@ -41,7 +43,7 @@ flowchart TD
 
     subgraph BRONZELAYER [" CAPA BRONZE (Ingestión Cruda) "]
         BRZ_API["📥 data/bronze/api/<br/>raw_waqi_api_extract.json<br/>(Payload crudo + Metadata)"]
-        BRZ_XLS["📥 data/bronze/excel/<br/>raw_gei_inventory.csv<br/>(12,156 filas + SHA256 + Time)"]
+        BRZ_XLS["📥 data/bronze/excel/<br/>raw_gei_inventory.csv<br/>(aprox. 12 mil filas + SHA256 + Time)"]
     end
 
     subgraph SILVERLAYER [" CAPA SILVER (Limpieza y Conformación) "]
@@ -57,7 +59,7 @@ flowchart TD
         DIM_S["🏭 dim_sector_gei<br/>(352 Sectores y Códigos IPCC)"]
         DIM_G["🧪 dim_tipo_gas_contaminante<br/>(26 Gases GEI + Contaminantes Criterio + GWP)"]
         DIM_E["📍 dim_estacion_monitoreo<br/>(Estaciones, Coordenadas, Ciudades)"]
-        FACT_G["📈 fact_emisiones_gei_historico<br/>(20,083 hechos dimensionales)"]
+        FACT_G["📈 fact_emisiones_gei_historico<br/>(más de 20 mil hechos dimensionales)"]
         FACT_A["⏱️ fact_calidad_aire_tiempo_real<br/>(AQI, PM2.5, PM10, Variables Meteo)"]
         MART_C["📑 mart_consolidado_ambiental<br/>(Series y Participación por Sector)"]
         MART_K["🎯 mart_kpis_resumen_ejecutivo<br/>(Indicadores Clave de Decisión)"]
@@ -66,7 +68,9 @@ flowchart TD
     subgraph SERVINGLAYER [" CAPA DE SERVICIO Y ANALÍTICA "]
         DB_SQL["🗄️ SQLite Data Warehouse<br/>(green_data_warehouse.db + Índices)"]
         XLS_REP["📑 Reporte Ejecutivo Excel<br/>(reporte_ejecutivo_green_data.xlsx)"]
-        CSV_PUB["📄 Data Marts en CSV / Parquet"]
+        CSV_PUB["📄 Data Marts en CSV"]
+        API_SRV["⚡ Backend FastAPI (src/api/server.py)<br/>Endpoints /api/* + Chat Ollama"]
+        FE_REA["🖥️ Frontend React/Vite (frontend/)<br/>Dashboard, Explorador SQL y Chat"]
     end
 
     SRC_API --> BRZ_API
@@ -88,6 +92,7 @@ flowchart TD
     DIM_T & DIM_S & DIM_G & DIM_E & FACT_G & FACT_A & MART_C & MART_K --> DB_SQL
     DIM_T & DIM_S & DIM_G & DIM_E & FACT_G & FACT_A & MART_C & MART_K --> XLS_REP
     DIM_T & DIM_S & DIM_G & DIM_E & FACT_G & FACT_A & MART_C & MART_K --> CSV_PUB
+    DB_SQL --> API_SRV --> FE_REA
 ```
 
 ---
@@ -104,7 +109,7 @@ sequenceDiagram
     participant Quality as Auditoría de Calidad
     participant Storage as Almacenamiento (Warehouse & Excel)
 
-    CLI->>Extractor: Ejecutar run_pipeline.py
+    CLI->>Extractor: Ejecutar Bronze desde la interfaz web o la API
     Extractor->>Extractor: Descargar API WAQI (Target @7441 + Red Colombia)
     Extractor->>Extractor: Leer Excel Inventario GEI + Calcular Checksum SHA256
     Extractor->>Quality: Auditar dataset no vacío y rango temporal
@@ -241,11 +246,11 @@ erDiagram
 
 | Fuente                                   | Tipo          | Formato Original  | Volumen / Frecuencia                  | Descripción                                                                                                             |
 | :--------------------------------------- | :------------ | :---------------- | :------------------------------------ | :----------------------------------------------------------------------------------------------------------------------- |
-| **Inventario Nacional GEI**        | Archivo Local | Excel (`.xlsx`) | 12,156 registros / Anual (1990–2024) | Emisiones históricas de GEI en Colombia clasificadas según metodología IPCC en 352 categorías.                       |
+| **Inventario Nacional GEI**        | Archivo Local | Excel (`.xlsx`) | Aproximadamente 12 mil registros / Anual (1990–2024) | Emisiones históricas de GEI en Colombia clasificadas según metodología IPCC.                       |
 | **World Air Quality Index (WAQI)** | REST API      | JSON              | Tiempo real / Estaciones Urbanas      | Mediciones de calidad del aire ($PM_{2.5}$, $PM_{10}$, $O_3$, etc.), geolocalización y variables meteorológicas. |
 
 > [!NOTE]
-> **Resolución de la API**: La URL base solicitada `https://api.waqi.info/feed/A07441/?token=...` fue procesada con resolución automática de la estación `@7441` (estación US EPA en red WAQI) y enriquecida con la red de monitoreo de calidad del aire en ciudades colombianas (Bogotá, Medellín, Cali) para contrastar los inventarios macro con la calidad del aire local.
+> **Resolución de la API**: La extracción consulta la estación configurada y busca estaciones en ciudades colombianas (Bogotá, Medellín, Cali y Barranquilla). WAQI se consulta durante la ejecución de Bronze; no es una transmisión continua.
 
 ---
 
@@ -260,7 +265,7 @@ erDiagram
 
 - **Reparación de Encodings**: Corrección de textos corruptos en español (e.g. `AO` $\rightarrow$ `anio`, `Energa` $\rightarrow$ `Energía`, `Gestin` $\rightarrow$ `Gestión`, `Maz` $\rightarrow$ `Maíz`, `Bfalos` $\rightarrow$ `Búfalos`).
 - **Parsing de Jerarquías IPCC**: Extracción mediante expresiones regulares del código IPCC (e.g. `3.B.1.a.iv.1`), macro-sector (`1. Energía`, `2. IPPU`, `3. AFOLU`, `4. FOLU`, `5. Residuos`), subsector, descripción de la actividad y nivel de profundidad (1 al 6).
-- **Unpivot y Normalización Dimensional**: Transformación del formato ancho (wide) a formato ordenado (tidy/long), generando 20,083 hechos granulares de gases con su respectivo potencial de calentamiento global ($CO_2$, $CH_4$, $N_2O$, $SF_6$, HFCs, PFCs, HFOs).
+- **Unpivot y Normalización Dimensional**: Transformación del formato ancho (wide) a formato ordenado (tidy/long), generando más de 20 mil hechos granulares de gases con su respectivo potencial de calentamiento global ($CO_2$, $CH_4$, $N_2O$, $SF_6$, HFCs, PFCs, HFOs).
 - **Validación de Balance Físico**: Verificación de la identidad contable ambiental:
   $$
   \text{Emisiones Netas} = \text{Emisiones Brutas} + \text{Absorciones}
@@ -280,101 +285,158 @@ erDiagram
 
 ## 🛡 Gobernanza y Auditoría de Calidad de Datos
 
-El pipeline incorpora un motor automatizado de pruebas de calidad (`DataQualityChecker`) que valida las siguientes reglas en cada ejecución:
+El pipeline incorpora un motor automatizado de pruebas de calidad (`DataQualityChecker`) para comprobar reglas como las siguientes. El resultado concreto de cada auditoría depende de los datos generados y se puede consultar en la pestaña **Auditoría de Calidad** o en el endpoint de auditoría del backend.
 
-| Capa             | Test           | Regla de Calidad                                                                              |    Resultado    |
-| :--------------- | :------------- | :-------------------------------------------------------------------------------------------- | :--------------: |
-| **Bronze** | No Vacío      | `len(df) > 0` (12,156 filas leídas)                                                        | **PASSED** |
-| **Bronze** | Rango Temporal | `anio` entre 1990 y 2030 (0 violaciones)                                                    | **PASSED** |
-| **Silver** | No Vacío      | Hechos de gases normalizados > 20,000                                                         | **PASSED** |
-| **Silver** | No Vacío      | Estaciones de monitoreo > 0                                                                   | **PASSED** |
-| **Silver** | Unicidad PK    | `sector_id` único sin duplicados en catálogo                                              | **PASSED** |
-| **Silver** | Unicidad PK    | `estacion_id` único sin duplicados en catálogo                                            | **PASSED** |
-| **Silver** | Umbral Nulos   | Nulos = 0% en columnas críticas de hechos                                                    | **PASSED** |
-| **Silver** | Rango AQI      | $0 \le AQI \le 500$ (0 violaciones)                                                         | **PASSED** |
-| **Gold**   | Integridad FK  | `fact_emisiones_gei.anio` $\rightarrow$ `dim_tiempo.anio` (0 huérfanos)                | **PASSED** |
-| **Gold**   | Integridad FK  | `fact_emisiones_gei.sector_id` $\rightarrow$ `dim_sector_gei.sector_id` (0 huérfanos)  | **PASSED** |
-| **Gold**   | Integridad FK  | `fact_emisiones_gei.gas_codigo` $\rightarrow$ `dim_tipo_gas.gas_codigo` (0 huérfanos)  | **PASSED** |
-| **Gold**   | Integridad FK  | `fact_calidad_aire.estacion_id` $\rightarrow$ `dim_estacion.estacion_id` (0 huérfanos) | **PASSED** |
+| Capa | Regla de calidad |
+| :--- | :--- |
+| **Bronze** | Verifica que la extracción contenga datos y que los años estén dentro del rango esperado. |
+| **Silver** | Comprueba que existan hechos y estaciones, que las claves de los catálogos sean únicas y que las columnas críticas no estén vacías. |
+| **Silver** | Valida el rango del AQI y el balance de emisiones netas, brutas y absorciones. |
+| **Gold** | Comprueba la integridad referencial entre hechos y dimensiones de tiempo, sector, gas y estación. |
+
+---
+
+## 🖥️ Aplicación Web: Backend FastAPI y Frontend React/Vite
+
+La aplicación web permite operar el pipeline y consultar los resultados Gold desde el navegador:
+
+- **Pipeline Medallion:** ejecuta Bronze, Silver y Gold por separado y muestra el estado de las capas y el resultado de cada operación.
+- **Dashboard:** presenta KPIs, tendencias históricas, sectores y mediciones de calidad del aire.
+- **Consultas IA:** permite preguntar en español sobre el resumen Gold mediante Ollama, un servicio local opcional.
+- **Explorador SQL:** envía consultas `SELECT` al Data Warehouse SQLite y muestra los resultados.
+- **Auditoría de calidad:** ejecuta comprobaciones de claves únicas e integridad referencial.
+- **Reporte ejecutivo:** FastAPI expone el resumen ejecutivo y la auditoría como datos JSON; Gold también genera un libro Excel con pestañas para KPIs, sectores, calidad del aire, una muestra de hechos GEI y el catálogo de gases.
+
+El backend se encuentra en `src/api/server.py` y la interfaz en `frontend/`. La documentación interactiva de la API queda disponible en `http://localhost:8000/docs` al iniciar el backend. Ollama solo se necesita para la pestaña de consultas IA; no es requisito para las etapas ETL.
+
+| Grupo | Rutas principales |
+| :--- | :--- |
+| Estado y pipeline | `GET /api/health`, `GET /api/pipeline/status`, `POST /api/pipeline/execute` |
+| Datos Gold | `GET /api/data/kpis`, `/api/data/sectors`, `/api/data/trend`, `/api/data/air-quality`, `/api/data/gases`, `/api/data/time-dimension` |
+| Consultas y chat | `POST /api/data/sql` (solo `SELECT`), `POST /api/chat`, `GET /api/chat/status` |
+| Reportes y auditoría | `GET /api/reports/executive`, `GET /api/reports/quality-audit` |
 
 ---
 
 ## 📁 Estructura del Repositorio (Estructura Modular)
 
 ```text
-├── config/                        # Módulo de configuración global
-│   ├── __init__.py
-│   └── settings.py                # Variables de entorno, rutas, endpoints y tokens
-├── data/                          # Almacenamiento Medallion (Data Lake y Warehouse)
-│   ├── bronze/                    # Ingestión cruda (JSON de API y CSV de Excel)
-│   ├── silver/                    # Tablas limpias, reparadas y normalizadas
-│   └── gold/                      # Tablas dimensionales, hechos y data marts
-│       ├── green_data_warehouse.db           # SQLite Data Warehouse
-│       └── reporte_ejecutivo_green_data.xlsx # Reporte Excel Ejecutivo
-├── logs/                          # Registro histórico de logs del pipeline
+├── .env.example                   # Plantilla de configuración local
+├── config/
+│   └── settings.py                # Rutas, variables de entorno y catálogos
+├── data/
+│   ├── bronze/                    # Entrada original: CSV de Excel y JSON de WAQI
+│   ├── silver/                    # Datos limpios y normalizados en CSV
+│   └── gold/                      # Dimensiones, hechos, data marts, SQLite y Excel
+├── frontend/                      # Aplicación web React/Vite
+│   └── src/
+│       ├── App.jsx                # Panel, dashboard, chat, SQL y auditoría
+│       └── index.css
+├── logs/
 │   └── etl_pipeline.log
-├── notebooks/                     # Notebooks de análisis exploratorio
+├── notebooks/
 │   └── analisis_ambiental_gei_waqi.ipynb
-├── src/                           # Código fuente de la solución ETL
-│   ├── __init__.py
-│   ├── app_tkinter.py             # 🖥️ Aplicación de Escritorio GUI Interactiva (Tkinter)
-│   ├── extract/                   # Módulos de extracción (Bronze)
-│   │   ├── __init__.py
-│   │   ├── api_extractor.py       # Extracción REST API (WAQI)
-│   │   └── excel_extractor.py     # Ingestión Excel Inventario GEI
-│   ├── transform/                 # Módulos de transformación (Silver y Gold)
-│   │   ├── __init__.py
-│   │   ├── bronze_to_silver.py    # Limpieza, unpivot, parsing y balance
-│   │   └── silver_to_gold.py      # Esquema en estrella, hechos y data marts
-│   ├── load/                      # Módulos de carga y publicación
-│   │   ├── __init__.py
-│   │   └── database_loader.py     # Carga en SQLite y exportación Excel
-│   └── quality/                   # Módulos de calidad y gobernanza
-│       ├── __init__.py
-│       └── quality_checker.py     # Motor de validación automatizado
-├── test/                          # Pruebas unitarias e integración
-│   ├── __init__.py
-│   └── test_etl.py                # Test suite completo (100% aprobado)
-├── Series_Históricas_...xlsx      # Dataset origen: Inventario Nacional GEI
-└── requirements.txt               # Dependencias del proyecto
+├── src/
+│   ├── api/server.py              # API FastAPI, ejecución ETL y consultas Gold
+│   ├── extract/                   # Extracción de Excel y WAQI
+│   ├── transform/                 # Transformaciones Bronze → Silver → Gold
+│   ├── load/database_loader.py    # Carga SQLite y generación de Excel
+│   ├── quality/                   # Validaciones de calidad
+│   └── utils/                     # Logging y utilidades compartidas
+├── test/
+│   └── test_etl.py                # Pruebas unitarias y de integración
+├── Series_Históricas_...xlsx      # Inventario Nacional GEI de origen
+├── requirements.txt               # Dependencias Python
+└── GUIA_DEL_PROYECTO.md           # Guía breve de explicación y presentación
 ```
 
 ---
 
 ## 🚀 Guía de Instalación y Ejecución
 
-### 1. Requisitos Previos
+### Requisitos previos
 
-- **Python 3.10 o superior**
-- Conexión a Internet (para la consulta a la API REST)
+- Python 3.10 o superior.
+- Node.js y npm para la interfaz web.
+- Conexión a Internet y un token WAQI para ejecutar Bronze.
+- Ollama y el modelo configurado, únicamente si se quiere utilizar el chat IA.
 
-### 2. Instalación de Dependencias
+### Configuración e instalación
 
-```bash
-pip install -r requirements.txt
+Desde PowerShell, en la raíz del repositorio:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+Copy-Item .env.example .env
 ```
 
-### 3. Ejecución mediante la Aplicación de Escritorio (GUI Tkinter)
+Edita `.env` y asigna tu token en `WAQI_API_TOKEN`. El archivo `.env` contiene configuración local y no debe publicarse. Las variables opcionales de WAQI, Ollama y el servidor tienen valores predeterminados documentados en `.env.example`.
 
-Para ejecutar y visualizar todo el proceso de forma interactiva con interfaz gráfica:
+Instala las dependencias del frontend:
 
-```bash
-python src/app_tkinter.py
+```powershell
+Set-Location frontend
+npm install
+Set-Location ..
 ```
 
-> **Funcionalidades de la Aplicación Gráfica:**
->
-> - 🕹️ **Panel de Control:** Botones para ejecutar el pipeline completo o fases individuales (Bronze, Silver, Gold), barra de progreso y consola de log en vivo.
-> - 📊 **Explorador de Datos:** Visor interactivo de tablas con buscador y conteo de registros para examinar cualquier capa del Data Lake.
-> - 📈 **Dashboard & Resumen Ejecutivo:** Tarjetas de KPIs macro, ranking de emisiones por sector y monitoreo de calidad del aire en tiempo real.
-> - 🗄️ **Consultas SQL en Vivo:** Editor SQL interactivo conectado a `green_data_warehouse.db` con consultas predefinidas.
-> - 📁 **Archivos & Reportes:** Botones de acceso directo para abrir el reporte en Excel y la base de datos SQLite.
+### Iniciar la aplicación
 
-### 4. Ejecución de Pruebas Automatizadas
+Abre dos terminales desde la raíz del repositorio. En la primera, activa el entorno virtual e inicia FastAPI:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+python -m uvicorn src.api.server:app --host 127.0.0.1 --port 8000 --reload
+```
+
+En la segunda, inicia Vite y abre la dirección indicada en la terminal (por defecto `http://localhost:3000`):
+
+```powershell
+Set-Location frontend
+npm run dev
+```
+
+La API está disponible en `http://localhost:8000`; su documentación interactiva está en `http://localhost:8000/docs`.
+
+### Ejecutar el pipeline
+
+En la pestaña **Pipeline Medallion** de la aplicación, ejecuta las capas en orden:
+
+1. **Bronze:** consulta WAQI y lee el archivo Excel de origen.
+2. **Silver:** procesa los datos guardados en Bronze.
+3. **Gold:** crea dimensiones, hechos y data marts, y carga SQLite y el reporte Excel.
+
+Silver requiere Bronze y Gold requiere Silver. La extracción de calidad del aire es una captura de la consulta a WAQI, no un proceso continuo. Para actualizarla, vuelve a ejecutar las capas en orden.
+
+### Activar el chat IA (opcional)
+
+Instala e inicia Ollama y descarga el modelo configurado por defecto:
 
 ```bash
-python -m unittest test/test_etl.py
+ollama pull qwen2.5:1.5b
 ```
+
+El modelo y el servicio se pueden configurar mediante `OLLAMA_MODEL` y `OLLAMA_BASE_URL` en `.env`. El chat utiliza el resumen de datos Gold disponible en SQLite; no participa en el procesamiento ETL.
+
+### Pruebas automatizadas
+
+```powershell
+python -m unittest test.test_etl
+```
+
+Las pruebas de integración extraen el Excel y consultan WAQI, por lo que necesitan el archivo fuente y conexión a Internet. También escriben resultados en las carpetas de datos configuradas.
+
+### Compartir una demostración temporalmente (opcional)
+
+Con el backend y Vite activos, se puede exponer Vite mediante Cloudflare Tunnel:
+
+```powershell
+cloudflared tunnel --url http://127.0.0.1:3000
+```
+
+El enlace `trycloudflare.com` es temporal y público mientras el túnel esté activo. Compártelo solo con personas de confianza y detén el túnel con `Ctrl+C` al terminar.
 
 ---
 
@@ -407,7 +469,7 @@ ORDER BY emisiones_brutas_kt DESC;
 
 ---
 
-### Consulta 2: Monitoreo en Tiempo Real de Calidad del Aire por Estación
+### Consulta 2: Calidad del Aire Consultada por Estación
 
 ```sql
 SELECT 
@@ -430,4 +492,49 @@ ORDER BY f.aqi DESC;
 
 1. **Prioridad en Descarbonización del Sector Energía (40.7%):** El transporte vehicular y la generación termoeléctrica concentran el mayor crecimiento ($CAGR = +1.06\%$ anual). Se requiere acelerar la electrificación de flotas y matrices renovables.
 2. **Preservación de Sumideros Forestales (FOLU):** Las absorciones forestales mitigan más de $12,000\text{ kt } CO_2eq$ anuales. Combatir la deforestación en la Amazonía y cordilleras es vital para mantener la meta de carbono neutralidad 2050.
-3. **Puntos Críticos Urbanos en Calidad del Aire:** Las estaciones urbanas (como Centro de Alto Rendimiento y Kennedy en Bogotá) presentan concentraciones de $PM_{2.5}$ en rango *Moderado/Alerta*, correlacionadas con las emisiones del transporte diésel y combustión fósil.
+3. **Puntos Críticos Urbanos en Calidad del Aire:** Las estaciones urbanas (como Centro de Alto Rendimiento y Kennedy en Bogotá) permiten comparar concentraciones de $PM_{2.5}$ con los sectores emisores. Las mediciones dependen de la captura más reciente consultada a WAQI y no representan un flujo continuo.
+
+---
+
+## ✅ Verificación, Preguntas Frecuentes y Glosario
+
+### ¿Cómo comprobar que la ejecución terminó?
+
+- La pestaña **Pipeline Medallion** muestra el estado de Bronze, Silver y Gold y el resultado de la última ejecución.
+- Los registros se guardan en `data/pipeline_execution.log` y `data/api_server.log`; el log general del ETL está en `logs/etl_pipeline.log`.
+- Revisa los CSV de cada capa en `data/bronze/`, `data/silver/` y `data/gold/`.
+- La base `data/gold/green_data_warehouse.db` contiene las tablas consultadas por el dashboard.
+- La pestaña **Auditoría de Calidad** presenta las comprobaciones ejecutadas y su resultado.
+- Gold genera `data/gold/reporte_ejecutivo_green_data.xlsx`.
+
+### Preguntas frecuentes
+
+**¿La calidad del aire se actualiza continuamente?**
+
+No. Bronze consulta WAQI y conserva la respuesta obtenida en esa ejecución. Para obtener otra captura, vuelve a ejecutar Bronze y luego Silver y Gold.
+
+**¿Se necesita Ollama para procesar los datos?**
+
+No. Ollama solo se utiliza para las consultas en lenguaje natural de la pestaña IA. Las etapas ETL, el dashboard, SQL y el reporte Excel funcionan con el backend y los datos Gold.
+
+**¿Por qué se conservan CSV/JSON además de SQLite?**
+
+Bronze conserva los datos de origen y permite rastrear qué se recibió; Silver deja las fuentes limpias y normalizadas; Gold organiza los datos para consultas y reportes. SQLite es el almacén analítico local, no reemplaza las capas anteriores.
+
+**¿Qué significa que SQLite sea local?**
+
+El almacén es un archivo dentro del proyecto; no requiere instalar ni administrar un servidor de base de datos aparte.
+
+### Glosario
+
+| Término | Significado |
+| :--- | :--- |
+| **ETL** | Extraer, transformar y cargar datos. |
+| **GEI** | Gases de efecto invernadero. |
+| **IPCC** | Referencia metodológica utilizada para clasificar categorías de emisiones. |
+| **AQI** | Índice que resume la calidad del aire. |
+| **API** | Interfaz que permite intercambiar datos entre programas. |
+| **Data Warehouse** | Almacén organizado para consultas y análisis. |
+| **Ollama** | Servicio para ejecutar modelos de lenguaje localmente. |
+
+La [guía sencilla del proyecto](./GUIA_DEL_PROYECTO.md) complementa este README con una explicación breve del flujo de datos y un guion para presentar el proyecto.
