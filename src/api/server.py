@@ -3,7 +3,7 @@ Backend API Server - Green Data ETL
 FastAPI server that connects the React frontend with:
   - Gold layer data (SQLite warehouse)
   - ETL pipeline execution (step-by-step)
-  - Ollama LLM (llama3.1) for AI-powered data analysis chat
+  - Ollama LLM for AI-powered data analysis chat
 """
 
 import sys
@@ -11,9 +11,8 @@ import json
 import sqlite3
 import requests
 import time
-import logging
 from pathlib import Path
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any, List
 from contextlib import contextmanager
 
 from fastapi import FastAPI, HTTPException
@@ -247,7 +246,7 @@ def execute_pipeline_step(req: PipelineRequest):
             df_bronze = pd.read_csv(config.BRONZE_EXCEL_DIR / "raw_gei_inventory.csv")
             
             b2s = BronzeToSilverTransformer(logger=pipeline_logger)
-            df_wide, df_norm, df_sec = b2s.transform_excel_gei(df_bronze)
+            _, df_norm, df_sec = b2s.transform_excel_gei(df_bronze)
             df_stat, df_meas = b2s.transform_api_air_quality(raw_api)
             
             elapsed = time.time() - t0
@@ -454,7 +453,7 @@ def execute_custom_sql(req: SQLQuery):
 @app.post("/api/chat")
 def chat_with_ai(msg: ChatMessage):
     """
-    Sends user message to Ollama llama3.1 with full environmental data context.
+    Sends user message to the configured Ollama model with environmental data context.
     The AI can answer questions about GHG emissions, air quality, sectors, etc.
     """
     user_message = msg.message.strip()
@@ -479,7 +478,8 @@ def chat_with_ai(msg: ChatMessage):
     ]
     counts = data_summary.get('table_row_counts', {})
     
-    system_prompt = f"""Eres un experto analista ambiental de Colombia (Inventario GEI 1990-2024 y Calidad del Aire WAQI).
+    system_prompt = f"""Eres un analista ambiental de Colombia para el proyecto Green Data ETL.
+El flujo del proyecto es Bronze (fuentes originales) -> Silver (limpieza y normalización del inventario GEI y de la API de aire) -> Gold (tablas, resúmenes y SQLite).
 Tienes acceso a estos datos oficiales ya procesados del Data Warehouse Gold:
 
 ### KPIs Ejecutivos:
@@ -496,7 +496,9 @@ Total hechos GEI: {counts.get('fact_emisiones_gei_historico', 0):,} | Mediciones
 
 REGLAS:
 - Responde siempre en español de forma profesional, clara y estructurada.
+- No confundas las capas de este proyecto con conceptos de otras áreas. Si no tienes la respuesta en el contexto, dilo claramente y no inventes cifras.
 - Fundamenta tus respuestas con las cifras exactas provistas arriba.
+- Sé breve y responde en hasta 3 frases, salvo que soliciten un reporte detallado.
 - Si el usuario pide un reporte, organízalo con subtítulos claros y conclusiones breves.
 - Sé preciso con las unidades (kt CO2eq, AQI, µg/m³).
 """
@@ -512,8 +514,9 @@ REGLAS:
                 "options": {
                     "temperature": 0.6,
                     "top_p": 0.9,
-                    "num_predict": 700
-                }
+                    "num_predict": 250
+                },
+                "keep_alive": "5m"
             },
             timeout=300
         )
@@ -537,7 +540,7 @@ REGLAS:
     except requests.exceptions.ConnectionError:
         raise HTTPException(
             status_code=503,
-            detail="No se puede conectar con Ollama. Verifica que esté activo con: ollama run llama3.1"
+            detail=f"No se puede conectar con Ollama. Verifica que esté activo con: ollama run {OLLAMA_MODEL}"
         )
     except requests.exceptions.Timeout:
         raise HTTPException(

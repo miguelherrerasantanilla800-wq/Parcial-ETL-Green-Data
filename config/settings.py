@@ -48,7 +48,7 @@ API_BASE_SEARCH_URL = "https://api.waqi.info/search"
 
 # Ollama LLM Configuration loaded from environment
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.1")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen2.5:1.5b")
 
 # Backend Server Configuration
 API_HOST = os.getenv("API_HOST", "0.0.0.0")

@@ -22,7 +22,7 @@ export default function App() {
   const [chatMessages, setChatMessages] = useState([
     {
       role: 'ai',
-      text: '¡Hola! Soy tu asistente de inteligencia ambiental impulsado por Ollama llama3.1. Puedo analizar el inventario de GEI de Colombia, las estaciones de calidad del aire y generar reportes ejecutivos. ¿Qué te gustaría consultar hoy?'
+      text: '¡Hola! Soy tu asistente de inteligencia ambiental impulsado por Ollama. Puedo analizar el inventario de GEI de Colombia, las estaciones de calidad del aire y generar reportes ejecutivos. ¿Qué te gustaría consultar hoy?'
     }
   ]);
   const [chatInput, setChatInput] = useState('');
@@ -176,7 +176,7 @@ export default function App() {
       } else {
         setChatMessages([
           ...newMessages,
-          { role: 'ai', text: `⚠️ Error de Ollama (${res.status}): ${data.detail || 'No se pudo conectar con el modelo local llama3.1. Asegúrate de ejecutar: ollama run llama3.1'}` }
+          { role: 'ai', text: `⚠️ Error de Ollama (${res.status}): ${data.detail || 'No se pudo conectar con el modelo local. Verifica el modelo configurado en Ollama.'}` }
         ]);
       }
     } catch (err) {
@@ -223,7 +223,7 @@ export default function App() {
 
           <div className={`status-badge ${ollamaStatus?.ollama_running ? '' : 'offline'}`}>
             <span className="status-dot"></span>
-            <span>Ollama: {ollamaStatus?.model_available ? 'llama3.1 Listo' : 'Sin servicio'}</span>
+            <span>Ollama: {ollamaStatus?.model_available ? `${ollamaStatus.model_name} listo` : 'Sin servicio'}</span>
           </div>
         </div>
       </header>
@@ -496,7 +496,7 @@ export default function App() {
         {activeTab === 'chat' && (
           <div className="card chat-container">
             <div className="card-header">
-              <h3 className="card-title">🤖 Asistente de Análisis con Ollama llama3.1</h3>
+              <h3 className="card-title">🤖 Asistente de Análisis con Ollama</h3>
               <span className="status-badge">Contexto Gold Cargado</span>
             </div>
 
