@@ -1,4 +1,4 @@
-# 🌿 Green Data ETL Pipeline — Arquitectura Medallion
+# 🌿 Green Data ETL Pipeline — Arquitectura Medallion Hecho por Miguel Angel Herrera Santanilla Y Nayda Liseth Sierra Jaramillo
 
 Pipeline de **Extracción, Transformación y Carga (ETL)** diseñado bajo la **Arquitectura Medallion (Bronze, Silver y Gold)** para la integración, limpieza y análisis de datos ambientales estratégicos: el **Inventario Nacional de Gases de Efecto Invernadero (GEI) de Colombia (1990–2024)** y las mediciones de calidad del aire consultadas mediante la **API REST WAQI**.
 
@@ -244,10 +244,10 @@ erDiagram
 
 ## 📊 Fuentes de Información
 
-| Fuente                                   | Tipo          | Formato Original  | Volumen / Frecuencia                  | Descripción                                                                                                             |
-| :--------------------------------------- | :------------ | :---------------- | :------------------------------------ | :----------------------------------------------------------------------------------------------------------------------- |
-| **Inventario Nacional GEI**        | Archivo Local | Excel (`.xlsx`) | Aproximadamente 12 mil registros / Anual (1990–2024) | Emisiones históricas de GEI en Colombia clasificadas según metodología IPCC.                       |
-| **World Air Quality Index (WAQI)** | REST API      | JSON              | Tiempo real / Estaciones Urbanas      | Mediciones de calidad del aire ($PM_{2.5}$, $PM_{10}$, $O_3$, etc.), geolocalización y variables meteorológicas. |
+| Fuente                                   | Tipo          | Formato Original  | Volumen / Frecuencia                                  | Descripción                                                                                                             |
+| :--------------------------------------- | :------------ | :---------------- | :---------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------- |
+| **Inventario Nacional GEI**        | Archivo Local | Excel (`.xlsx`) | Aproximadamente 12 mil registros / Anual (1990–2024) | Emisiones históricas de GEI en Colombia clasificadas según metodología IPCC.                                          |
+| **World Air Quality Index (WAQI)** | REST API      | JSON              | Tiempo real / Estaciones Urbanas                      | Mediciones de calidad del aire ($PM_{2.5}$, $PM_{10}$, $O_3$, etc.), geolocalización y variables meteorológicas. |
 
 > [!NOTE]
 > **Resolución de la API**: La extracción consulta la estación configurada y busca estaciones en ciudades colombianas (Bogotá, Medellín, Cali y Barranquilla). WAQI se consulta durante la ejecución de Bronze; no es una transmisión continua.
@@ -267,6 +267,7 @@ erDiagram
 - **Parsing de Jerarquías IPCC**: Extracción mediante expresiones regulares del código IPCC (e.g. `3.B.1.a.iv.1`), macro-sector (`1. Energía`, `2. IPPU`, `3. AFOLU`, `4. FOLU`, `5. Residuos`), subsector, descripción de la actividad y nivel de profundidad (1 al 6).
 - **Unpivot y Normalización Dimensional**: Transformación del formato ancho (wide) a formato ordenado (tidy/long), generando más de 20 mil hechos granulares de gases con su respectivo potencial de calentamiento global ($CO_2$, $CH_4$, $N_2O$, $SF_6$, HFCs, PFCs, HFOs).
 - **Validación de Balance Físico**: Verificación de la identidad contable ambiental:
+
   $$
   \text{Emisiones Netas} = \text{Emisiones Brutas} + \text{Absorciones}
   $$
@@ -287,12 +288,12 @@ erDiagram
 
 El pipeline incorpora un motor automatizado de pruebas de calidad (`DataQualityChecker`) para comprobar reglas como las siguientes. El resultado concreto de cada auditoría depende de los datos generados y se puede consultar en la pestaña **Auditoría de Calidad** o en el endpoint de auditoría del backend.
 
-| Capa | Regla de calidad |
-| :--- | :--- |
-| **Bronze** | Verifica que la extracción contenga datos y que los años estén dentro del rango esperado. |
+| Capa             | Regla de calidad                                                                                                                         |
+| :--------------- | :--------------------------------------------------------------------------------------------------------------------------------------- |
+| **Bronze** | Verifica que la extracción contenga datos y que los años estén dentro del rango esperado.                                             |
 | **Silver** | Comprueba que existan hechos y estaciones, que las claves de los catálogos sean únicas y que las columnas críticas no estén vacías. |
-| **Silver** | Valida el rango del AQI y el balance de emisiones netas, brutas y absorciones. |
-| **Gold** | Comprueba la integridad referencial entre hechos y dimensiones de tiempo, sector, gas y estación. |
+| **Silver** | Valida el rango del AQI y el balance de emisiones netas, brutas y absorciones.                                                           |
+| **Gold**   | Comprueba la integridad referencial entre hechos y dimensiones de tiempo, sector, gas y estación.                                       |
 
 ---
 
@@ -309,12 +310,12 @@ La aplicación web permite operar el pipeline y consultar los resultados Gold de
 
 El backend se encuentra en `src/api/server.py` y la interfaz en `frontend/`. La documentación interactiva de la API queda disponible en `http://localhost:8000/docs` al iniciar el backend. Ollama solo se necesita para la pestaña de consultas IA; no es requisito para las etapas ETL.
 
-| Grupo | Rutas principales |
-| :--- | :--- |
-| Estado y pipeline | `GET /api/health`, `GET /api/pipeline/status`, `POST /api/pipeline/execute` |
-| Datos Gold | `GET /api/data/kpis`, `/api/data/sectors`, `/api/data/trend`, `/api/data/air-quality`, `/api/data/gases`, `/api/data/time-dimension` |
-| Consultas y chat | `POST /api/data/sql` (solo `SELECT`), `POST /api/chat`, `GET /api/chat/status` |
-| Reportes y auditoría | `GET /api/reports/executive`, `GET /api/reports/quality-audit` |
+| Grupo                 | Rutas principales                                                                                                                                |
+| :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Estado y pipeline     | `GET /api/health`, `GET /api/pipeline/status`, `POST /api/pipeline/execute`                                                                |
+| Datos Gold            | `GET /api/data/kpis`, `/api/data/sectors`, `/api/data/trend`, `/api/data/air-quality`, `/api/data/gases`, `/api/data/time-dimension` |
+| Consultas y chat      | `POST /api/data/sql` (solo `SELECT`), `POST /api/chat`, `GET /api/chat/status`                                                           |
+| Reportes y auditoría | `GET /api/reports/executive`, `GET /api/reports/quality-audit`                                                                               |
 
 ---
 
@@ -527,14 +528,14 @@ El almacén es un archivo dentro del proyecto; no requiere instalar ni administr
 
 ### Glosario
 
-| Término | Significado |
-| :--- | :--- |
-| **ETL** | Extraer, transformar y cargar datos. |
-| **GEI** | Gases de efecto invernadero. |
-| **IPCC** | Referencia metodológica utilizada para clasificar categorías de emisiones. |
-| **AQI** | Índice que resume la calidad del aire. |
-| **API** | Interfaz que permite intercambiar datos entre programas. |
-| **Data Warehouse** | Almacén organizado para consultas y análisis. |
-| **Ollama** | Servicio para ejecutar modelos de lenguaje localmente. |
+| Término                 | Significado                                                                  |
+| :----------------------- | :--------------------------------------------------------------------------- |
+| **ETL**            | Extraer, transformar y cargar datos.                                         |
+| **GEI**            | Gases de efecto invernadero.                                                 |
+| **IPCC**           | Referencia metodológica utilizada para clasificar categorías de emisiones. |
+| **AQI**            | Índice que resume la calidad del aire.                                      |
+| **API**            | Interfaz que permite intercambiar datos entre programas.                     |
+| **Data Warehouse** | Almacén organizado para consultas y análisis.                              |
+| **Ollama**         | Servicio para ejecutar modelos de lenguaje localmente.                       |
 
 La [guía sencilla del proyecto](./GUIA_DEL_PROYECTO.md) complementa este README con una explicación breve del flujo de datos y un guion para presentar el proyecto.
